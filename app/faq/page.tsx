@@ -188,7 +188,7 @@ const FAQPage = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: qIndex * 0.05 }}
-                      className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100"
+                      className="bg-white rounded-2xl overflow-hidden border border-gray-100"
                     >
                       <button
                         onClick={() => setOpenIndex(isOpen ? null : globalIndex)}

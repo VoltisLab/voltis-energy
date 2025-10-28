@@ -51,7 +51,7 @@ const CalculatorPage = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-white rounded-3xl p-10 shadow-2xl"
+              className="bg-white rounded-3xl p-10"
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
                 Enter Your Details
@@ -140,7 +140,7 @@ const CalculatorPage = () => {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-10 text-white shadow-2xl">
+              <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-10 text-white">
                 <h3 className="text-2xl font-bold mb-6">Your Estimated Savings</h3>
                 
                 <div className="space-y-6">
@@ -200,7 +200,7 @@ const CalculatorPage = () => {
               </div>
 
               {/* CTA */}
-              <div className="bg-white rounded-2xl p-8 shadow-xl text-center">
+              <div className="bg-white rounded-2xl p-8 text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Ready to Get Started?
                 </h3>
@@ -308,7 +308,7 @@ const CalculatorPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-lg"
+                className="bg-white rounded-2xl p-8"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{factor.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{factor.description}</p>

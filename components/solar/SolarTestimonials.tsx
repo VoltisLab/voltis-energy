@@ -74,7 +74,7 @@ const SolarTestimonials = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-2xl p-8 transition-all duration-300 border border-gray-100"
             >
               {/* Quote Icon */}
               <div className="flex justify-between items-start mb-6">

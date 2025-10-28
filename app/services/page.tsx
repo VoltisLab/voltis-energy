@@ -180,7 +180,7 @@ const ServicesPage = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-white rounded-3xl shadow-xl overflow-hidden ${
+                className={`bg-white rounded-3xl overflow-hidden ${
                   index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 } flex flex-col lg:flex`}
               >
@@ -232,7 +232,7 @@ const ServicesPage = () => {
                   </div>
 
                   <Link href={service.link}>
-                    <button className={`bg-gradient-to-r ${service.gradient} text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg`}>
+                    <button className={`bg-gradient-to-r ${service.gradient} text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105`}>
                       Get Free Quote →
                     </button>
                   </Link>

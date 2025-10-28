@@ -155,7 +155,7 @@ const ProductsPage = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-white rounded-2xl shadow-xl border-2 border-gray-100 hover:border-blue-300 transition-all duration-300 overflow-hidden"
+                className="bg-white rounded-2xl border-2 border-gray-100 hover:border-blue-300 transition-all duration-300 overflow-hidden"
               >
                 {panel.badge && (
                   <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-2 px-4 text-center font-semibold text-sm">
@@ -235,7 +235,7 @@ const ProductsPage = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-white rounded-2xl shadow-xl border-2 border-gray-100 hover:border-cyan-300 transition-all duration-300 overflow-hidden"
+                className="bg-white rounded-2xl border-2 border-gray-100 hover:border-cyan-300 transition-all duration-300 overflow-hidden"
               >
                 {inverter.badge && (
                   <div className="bg-gradient-to-r from-cyan-600 to-blue-800 text-white py-2 px-4 text-center font-semibold text-sm">
@@ -312,7 +312,7 @@ const ProductsPage = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-white rounded-2xl shadow-xl border-2 border-gray-100 hover:border-green-300 transition-all duration-300 overflow-hidden"
+                className="bg-white rounded-2xl border-2 border-gray-100 hover:border-green-300 transition-all duration-300 overflow-hidden"
               >
                 {battery.badge && (
                   <div className="bg-gradient-to-r from-green-600 to-emerald-800 text-white py-2 px-4 text-center font-semibold text-sm">
@@ -391,7 +391,7 @@ const ProductsPage = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-lg text-center"
+                className="bg-white rounded-xl p-6 text-center"
               >
                 <Shield className="w-12 h-12 text-blue-600 mx-auto mb-3" />
                 <p className="font-semibold text-gray-900">{cert}</p>

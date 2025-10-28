@@ -143,7 +143,7 @@ const ProjectsPage = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-white rounded-3xl shadow-2xl overflow-hidden ${
+                className={`bg-white rounded-3xl overflow-hidden ${
                   index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 } flex flex-col lg:flex`}
               >

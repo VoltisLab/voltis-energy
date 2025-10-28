@@ -90,7 +90,7 @@ export default function ResourcesPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 cursor-pointer"
+                className="bg-white rounded-2xl transition-all duration-300 overflow-hidden border border-gray-100 cursor-pointer"
               >
                 <div className="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
                   <BookOpen className="w-16 h-16 text-white/30" />
@@ -149,7 +149,7 @@ export default function ResourcesPage() {
               Get a free consultation and custom quote for your property
             </p>
             <Link href="/contact">
-              <button className="px-8 py-4 bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">
+              <button className="px-8 py-4 bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 Get Free Quote
               </button>
             </Link>

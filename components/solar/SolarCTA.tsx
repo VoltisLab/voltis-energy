@@ -92,7 +92,7 @@ const SolarCTA = () => {
           className="text-center"
         >
           <Link href="/calculator">
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-12 py-5 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-2xl inline-flex items-center gap-3">
+            <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-12 py-5 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
               <span>Calculate Your Savings</span>
               <span className="text-2xl">→</span>
             </button>

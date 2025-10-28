@@ -63,7 +63,7 @@ const SolarHero = () => {
               className="flex flex-wrap gap-4 mb-12"
             >
               <Link href="/contact">
-                <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105">
                   Get Free Quote
                 </button>
               </Link>

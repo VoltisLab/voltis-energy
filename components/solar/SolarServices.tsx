@@ -87,7 +87,7 @@ const SolarServices = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden"
+              className="group bg-white rounded-2xl transition-all duration-300 border border-gray-100 overflow-hidden"
             >
               <div className={`bg-gradient-to-br ${service.gradient} p-6`}>
                 <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4">

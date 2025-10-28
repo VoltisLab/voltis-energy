@@ -96,7 +96,7 @@ const SolarProducts = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ y: -10 }}
-              className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="bg-white rounded-3xl transition-all duration-300 overflow-hidden"
             >
               {/* Header */}
               <div className={`bg-gradient-to-br ${product.gradient} p-8 text-white`}>
@@ -167,7 +167,7 @@ const SolarProducts = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="bg-white rounded-3xl p-12 shadow-xl border border-gray-100"
+          className="bg-white rounded-3xl p-12 border border-gray-100"
         >
           <div className="text-center">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
