@@ -209,7 +209,7 @@ const AboutPage = () => {
               {
                 icon: Target,
                 title: 'Sustainability',
-                description: 'We're not just selling solar panels—we're building a sustainable future for our planet and future generations.',
+                description: "We're not just selling solar panels—we're building a sustainable future for our planet and future generations.",
                 color: 'from-cyan-500 to-teal-600'
               },
               {
