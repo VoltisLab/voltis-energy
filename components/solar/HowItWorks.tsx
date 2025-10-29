@@ -39,44 +39,44 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section ref={ref} className="py-24 bg-white">
+    <section ref={ref} className="py-12 sm:py-16 md:py-24 bg-white">
       <div className="max-w-[1280px] mx-auto px-4 xl:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-3 block">
+          <span className="text-blue-600 font-semibold text-xs sm:text-sm uppercase tracking-wider mb-3 block">
             Process
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
             How Solar Installation Works
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             From consultation to activation, we make going solar simple and hassle-free
           </p>
         </motion.div>
 
-        <div className="relative">
+        <div className="relative px-2 sm:px-0">
           {/* Connection Line */}
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-600 transform -translate-y-1/2 z-0"></div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-6 xl:gap-8 relative z-10">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="relative"
+                className="relative flex"
               >
                 {/* Step Number */}
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-xl z-20">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-xl z-20 shadow-lg">
                   {index + 1}
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 transition-all duration-300 border-2 border-blue-100 hover:border-blue-400 mt-8 h-full">
+                <div className="bg-white rounded-2xl p-6 sm:p-8 transition-all duration-300 border-2 border-blue-100 hover:border-blue-400 hover:shadow-xl mt-8 w-full flex flex-col">
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <step.icon className="w-8 h-8 text-blue-600" />
                   </div>
@@ -91,15 +91,15 @@ const HowItWorks = () => {
                     </span>
                   </div>
 
-                  <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                  <p className="text-gray-600 mb-6 text-center leading-relaxed flex-grow">
                     {step.description}
                   </p>
 
-                  <div className="space-y-2">
+                  <div className="space-y-2 mt-auto">
                     {step.details.map((detail, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-700">
-                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
-                        {detail}
+                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 flex-shrink-0"></div>
+                        <span>{detail}</span>
                       </div>
                     ))}
                   </div>
@@ -114,16 +114,16 @@ const HowItWorks = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1 }}
-          className="mt-16 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200"
+          className="mt-12 sm:mt-16 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-6 sm:p-8 border border-blue-200 mx-2 sm:mx-0"
         >
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
               Total Timeline: 3-6 Weeks
             </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-600 mb-6 max-w-2xl mx-auto px-2">
               From your initial consultation to flipping the switch on your solar system, the entire process typically takes 3-6 weeks, with most of that time spent on permitting and approvals.
             </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm sm:text-base">
               Start Your Solar Journey Today
             </button>
           </div>
