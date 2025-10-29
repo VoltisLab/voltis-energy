@@ -11,10 +11,9 @@ const Header = () => {
 
   const navItems = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
+    { label: 'Build an Inverter', href: '/calculator' },
     { label: 'Services', href: '/services' },
     { label: 'Products', href: '/products' },
-    { label: 'Calculator', href: '/calculator' },
     { label: 'Projects', href: '/projects' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Resources', href: '/resources' },
@@ -87,18 +86,18 @@ const Header = () => {
               )}
             </div>
 
-            <Link href="/contact">
+            <Link href="/calculator">
               <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-                Get Free Quote
+                Build an Inverter
               </button>
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center gap-2">
-            <Link href="/contact">
+            <Link href="/calculator">
               <button className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold">
-                Quote
+                Build
               </button>
             </Link>
             <button

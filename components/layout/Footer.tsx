@@ -11,10 +11,11 @@ const Footer = () => {
   ];
 
   const resourceLinks = [
-    { title: 'Calculator', href: '/calculator' },
+    { title: 'Build an Inverter', href: '/calculator' },
     { title: 'FAQ', href: '/faq' },
     { title: 'Resources', href: '/resources' },
-    { title: 'Contact', href: '/contact' }
+    { title: 'Contact', href: '/contact' },
+    { title: 'About', href: '/about' }
   ];
 
   return (
