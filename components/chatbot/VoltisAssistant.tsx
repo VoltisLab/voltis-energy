@@ -105,7 +105,7 @@ const knowledgeBase = {
   // Projects/Portfolio
   projects: {
     keywords: ['project', 'projects', 'portfolio', 'examples', 'previous work', 'past work', 'gallery'],
-    response: "We've completed 150+ successful installations!\n\n🏡 Residential homes\n   2kW to 15kW systems\n\n🏢 Commercial buildings\n   Up to 100kW\n\n🏭 Industrial facilities\n   Custom solutions\n\nCheck our Projects page to see real installations with detailed specs, costs, and annual savings. Every project showcases our commitment to quality!"
+    response: "We've completed 120+ successful installations!\n\n🏡 Residential homes\n   2kW to 15kW systems\n\n🏢 Commercial buildings\n   Up to 100kW\n\n🏭 Industrial facilities\n   Custom solutions\n\nCheck our Projects page to see real installations with detailed specs, costs, and annual savings. Every project showcases our commitment to quality!"
   },
 
   // Contact & Quote

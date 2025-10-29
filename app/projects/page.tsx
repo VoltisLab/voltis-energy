@@ -116,7 +116,7 @@ const ProjectsPage = () => {
             </p>
             <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-12">
               <div>
-                <div className="text-4xl font-bold text-yellow-400">5,000+</div>
+                <div className="text-4xl font-bold text-yellow-400">120+</div>
                 <div className="text-blue-200">Projects Completed</div>
               </div>
               <div>

@@ -82,7 +82,7 @@ const SolarHero = () => {
               className="grid grid-cols-3 gap-6"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">5000+</div>
+                <div className="text-3xl font-bold text-yellow-400">120+</div>
                 <div className="text-sm text-blue-200 mt-1">Installations</div>
               </div>
               <div className="text-center">

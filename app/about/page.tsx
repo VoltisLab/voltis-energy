@@ -31,11 +31,11 @@ const AboutPage = () => {
                 <div className="text-blue-200">Years Experience</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-yellow-400">5,000+</div>
+                <div className="text-4xl font-bold text-yellow-400">120+</div>
                 <div className="text-blue-200">Installations</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-yellow-400">150+</div>
+                <div className="text-4xl font-bold text-yellow-400">25+</div>
                 <div className="text-blue-200">Team Members</div>
               </div>
             </div>
@@ -63,7 +63,7 @@ const AboutPage = () => {
                   Over the past 25 years, we've witnessed the transformation of the solar industry - from niche technology to mainstream solution. We've been at the forefront of this revolution, constantly innovating and adapting to bring our customers the best solar technology available.
                 </p>
                 <p>
-                  Today, we've installed over 5,000 solar systems across the UK, helping families and businesses reduce their carbon footprint while saving money on energy costs. Every installation represents our commitment to a cleaner, more sustainable future.
+                  Today, we've installed over 120 solar systems across the UK, helping families and businesses reduce their carbon footprint while saving money on energy costs. Every installation represents our commitment to a cleaner, more sustainable future.
                 </p>
               </div>
             </motion.div>
@@ -81,7 +81,7 @@ const AboutPage = () => {
               <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl p-8 text-white mt-8">
                 <Users className="w-12 h-12 mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Expert Team</h3>
-                <p className="text-green-100 text-sm">150+ certified professionals</p>
+                <p className="text-green-100 text-sm">25+ certified professionals</p>
               </div>
               <div className="bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl p-8 text-white -mt-8">
                 <Zap className="w-12 h-12 mb-4" />

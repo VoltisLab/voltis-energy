@@ -120,7 +120,7 @@ const SolarTestimonials = () => {
           className="mt-16 grid md:grid-cols-4 gap-6"
         >
           {[
-            { value: '5,000+', label: 'Happy Customers' },
+            { value: '120+', label: 'Happy Customers' },
             { value: '4.9/5', label: 'Average Rating' },
             { value: '98%', label: 'Would Recommend' },
             { value: '25MW+', label: 'Total Capacity Installed' }
