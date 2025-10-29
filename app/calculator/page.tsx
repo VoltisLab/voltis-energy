@@ -422,7 +422,7 @@ export default function CalculatorPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-8">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
         <div className="max-w-[1280px] mx-auto px-4 xl:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -430,14 +430,11 @@ export default function CalculatorPage() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-400 rounded-2xl mb-4">
-              <Calculator className="w-8 h-8 text-blue-900" />
-            </div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-3">
-              Custom Solar System Builder
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Build Your Solar System
             </h1>
-            <p className="text-base md:text-lg text-blue-100">
-              Build your perfect solar system by selecting your appliances and preferences
+            <p className="text-xl md:text-2xl text-blue-100">
+              Configure your perfect solar system by selecting your appliances and preferences
             </p>
           </motion.div>
         </div>

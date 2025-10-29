@@ -141,7 +141,7 @@ const FAQPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-12">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
         <div className="max-w-[1280px] mx-auto px-4 xl:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -149,9 +149,6 @@ const FAQPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-yellow-400 rounded-2xl mb-6">
-              <HelpCircle className="w-10 h-10 text-blue-900" />
-            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Frequently Asked Questions
             </h1>
