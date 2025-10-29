@@ -287,7 +287,7 @@ const FAQPage = () => {
               {
                 title: 'Our Products',
                 description: 'Explore our solar panels and equipment',
-                link: '/solar-products',
+                link: '/products',
                 gradient: 'from-yellow-500 to-orange-500'
               }
             ].map((item, index) => (

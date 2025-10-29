@@ -117,12 +117,16 @@ const WhyChooseSolar = () => {
               Join thousands of homeowners who are already saving money and protecting the environment with solar energy.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105">
-                Get Free Consultation
-              </button>
-              <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-                View Our Projects
-              </button>
+              <Link href="/contact">
+                <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105">
+                  Get Free Consultation
+                </button>
+              </Link>
+              <Link href="/projects">
+                <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+                  View Our Projects
+                </button>
+              </Link>
             </div>
           </div>
         </motion.div>
