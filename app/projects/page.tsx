@@ -244,7 +244,7 @@ const ProjectsPage = () => {
               We Install Solar Everywhere
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From homes to businesses, schools to farms—we've done it all
+              From homes to businesses, schools to farms - we've done it all
             </p>
           </motion.div>
 

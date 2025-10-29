@@ -167,7 +167,7 @@ const ServicesPage = () => {
               Complete Solar Solutions
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8">
-              From consultation to installation, maintenance, and beyond—we provide comprehensive solar services tailored to your needs
+              From consultation to installation, maintenance, and beyond - we provide comprehensive solar services tailored to your needs
             </p>
           </motion.div>
         </div>

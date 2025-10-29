@@ -69,7 +69,7 @@ const WhyChooseSolar = () => {
             Why Choose Solar Energy?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Investing in solar energy is more than just installing panels—it's about creating a sustainable future while enjoying immediate financial benefits.
+            Investing in solar energy is more than just installing panels - it's about creating a sustainable future while enjoying immediate financial benefits.
           </p>
         </motion.div>
 

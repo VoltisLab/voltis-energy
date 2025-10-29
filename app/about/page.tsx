@@ -60,7 +60,7 @@ const AboutPage = () => {
                   Founded in 1999, Voltis Energy began with a simple mission: make clean, renewable energy accessible to everyone. What started as a small team of passionate engineers has grown into one of the UK's leading solar installation companies.
                 </p>
                 <p>
-                  Over the past 25 years, we've witnessed the transformation of the solar industry—from niche technology to mainstream solution. We've been at the forefront of this revolution, constantly innovating and adapting to bring our customers the best solar technology available.
+                  Over the past 25 years, we've witnessed the transformation of the solar industry - from niche technology to mainstream solution. We've been at the forefront of this revolution, constantly innovating and adapting to bring our customers the best solar technology available.
                 </p>
                 <p>
                   Today, we've installed over 5,000 solar systems across the UK, helping families and businesses reduce their carbon footprint while saving money on energy costs. Every installation represents our commitment to a cleaner, more sustainable future.
@@ -203,13 +203,13 @@ const AboutPage = () => {
               {
                 icon: Users,
                 title: 'Integrity',
-                description: 'Honesty and transparency in all our dealings. No hidden fees, no pressure sales—just honest advice.',
+                description: 'Honesty and transparency in all our dealings. No hidden fees, no pressure sales - just honest advice.',
                 color: 'from-green-500 to-emerald-600'
               },
               {
                 icon: Target,
                 title: 'Sustainability',
-                description: "We're not just selling solar panels—we're building a sustainable future for our planet and future generations.",
+                description: "We're not just selling solar panels - we're building a sustainable future for our planet and future generations.",
                 color: 'from-cyan-500 to-teal-600'
               },
               {
