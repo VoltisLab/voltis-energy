@@ -14,7 +14,7 @@ interface Appliance {
 }
 
 export default function CalculatorPage() {
-  const { currencySymbol } = useLocation();
+  const { formatPrice } = useLocation();
   const [config, setConfig] = useState({
     systemType: 'residential',
     gridType: 'hybrid',
@@ -895,7 +895,7 @@ export default function CalculatorPage() {
                   {/* Total Cost */}
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
                     <div className="text-xs text-blue-100 mb-1">Total Investment</div>
-                    <div className="text-2xl font-bold">{currencySymbol}{totalCost.toLocaleString()}</div>
+                    <div className="text-2xl font-bold">{formatPrice(totalCost / 1950)}</div>
                     <div className="text-xs text-blue-200 mt-1">All-inclusive package</div>
                   </div>
 
@@ -907,7 +907,7 @@ export default function CalculatorPage() {
                           <TrendingDown className="w-3 h-3" />
                           Annual Savings
                         </div>
-                        <div className="text-2xl font-bold text-green-300">{currencySymbol}{annualSavings.toLocaleString()}</div>
+                        <div className="text-2xl font-bold text-green-300">{formatPrice(annualSavings / 1950)}</div>
                       </div>
 
                       <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
