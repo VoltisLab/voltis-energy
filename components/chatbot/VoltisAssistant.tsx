@@ -186,9 +186,12 @@ export default function VoltisAssistant() {
       // Find best response
       const responseContent = findBestResponse(inputValue);
       
+      // Add closing question to all responses
+      const fullResponse = `${responseContent}\n\nIs there anything else I can help you with?`;
+      
       // Calculate delay based on response length (100-300ms per 100 characters)
       const baseDelay = 1500; // Minimum 1.5 seconds
-      const lengthDelay = Math.floor(responseContent.length / 100) * 300;
+      const lengthDelay = Math.floor(fullResponse.length / 100) * 300;
       const totalDelay = Math.min(baseDelay + lengthDelay, 4000); // Max 4 seconds
 
       // Simulate thinking
@@ -197,7 +200,7 @@ export default function VoltisAssistant() {
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: responseContent,
+        content: fullResponse,
         timestamp: new Date()
       };
 
@@ -209,7 +212,7 @@ export default function VoltisAssistant() {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: "I apologize, but I encountered an error. Please try asking your question again, or contact us directly at solar@voltisenergy.com for immediate assistance!",
+        content: "I apologize, but I encountered an error. Please try asking your question again, or contact us directly at solar@voltisenergy.com for immediate assistance!\n\nIs there anything else I can help you with?",
         timestamp: new Date()
       };
       setMessages(prev => [...prev, errorMessage]);
