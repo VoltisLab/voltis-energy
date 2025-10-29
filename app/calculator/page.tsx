@@ -25,6 +25,7 @@ export default function CalculatorPage() {
   // Appliances Cart
   const [appliances, setAppliances] = useState<Appliance[]>([]);
   const [selectedAppliance, setSelectedAppliance] = useState('');
+  const [applianceSearch, setApplianceSearch] = useState('');
   
   // Panel Configuration
   const [panelConfig, setPanelConfig] = useState({
@@ -49,27 +50,228 @@ export default function CalculatorPage() {
   });
 
   const commonAppliances = [
-    { name: 'Air Conditioner (1.5HP)', watts: 1500 },
-    { name: 'Air Conditioner (2HP)', watts: 2000 },
-    { name: 'Refrigerator', watts: 200 },
-    { name: 'Freezer', watts: 300 },
-    { name: 'LED TV (43")', watts: 60 },
-    { name: 'LED TV (55")', watts: 100 },
-    { name: 'Ceiling Fan', watts: 75 },
-    { name: 'Standing Fan', watts: 60 },
-    { name: 'LED Light Bulb', watts: 10 },
-    { name: 'Laptop', watts: 65 },
-    { name: 'Desktop Computer', watts: 250 },
-    { name: 'Microwave', watts: 1200 },
-    { name: 'Electric Kettle', watts: 2000 },
-    { name: 'Washing Machine', watts: 500 },
-    { name: 'Iron', watts: 1500 },
-    { name: 'Water Pump', watts: 750 },
-    { name: 'Security System', watts: 50 },
-    { name: 'CCTV Camera (per unit)', watts: 10 },
-    { name: 'Wi-Fi Router', watts: 20 },
-    { name: 'Phone Charger', watts: 10 },
-  ];
+    // Air Conditioning & Climate Control
+    { name: 'Window AC (0.75HP)', watts: 900, category: 'Cooling' },
+    { name: 'Window AC (1HP)', watts: 1200, category: 'Cooling' },
+    { name: 'Split AC (1HP)', watts: 1200, category: 'Cooling' },
+    { name: 'Split AC (1.5HP)', watts: 1500, category: 'Cooling' },
+    { name: 'Split AC (2HP)', watts: 2000, category: 'Cooling' },
+    { name: 'Split AC (2.5HP)', watts: 2500, category: 'Cooling' },
+    { name: 'Split AC (3HP)', watts: 3000, category: 'Cooling' },
+    { name: 'Central AC (5HP)', watts: 5000, category: 'Cooling' },
+    { name: 'Portable AC Unit', watts: 1400, category: 'Cooling' },
+    { name: 'Air Cooler/Swamp Cooler', watts: 200, category: 'Cooling' },
+    { name: 'Dehumidifier', watts: 300, category: 'Cooling' },
+    { name: 'Space Heater (Small)', watts: 1000, category: 'Heating' },
+    { name: 'Space Heater (Large)', watts: 1500, category: 'Heating' },
+    
+    // Refrigeration
+    { name: 'Mini Fridge', watts: 100, category: 'Refrigeration' },
+    { name: 'Refrigerator (Small)', watts: 150, category: 'Refrigeration' },
+    { name: 'Refrigerator (Medium)', watts: 200, category: 'Refrigeration' },
+    { name: 'Refrigerator (Large)', watts: 300, category: 'Refrigeration' },
+    { name: 'Double Door Refrigerator', watts: 400, category: 'Refrigeration' },
+    { name: 'Side-by-Side Refrigerator', watts: 500, category: 'Refrigeration' },
+    { name: 'Chest Freezer (Small)', watts: 200, category: 'Refrigeration' },
+    { name: 'Chest Freezer (Large)', watts: 300, category: 'Refrigeration' },
+    { name: 'Deep Freezer', watts: 400, category: 'Refrigeration' },
+    { name: 'Upright Freezer', watts: 350, category: 'Refrigeration' },
+    { name: 'Wine Cooler', watts: 100, category: 'Refrigeration' },
+    { name: 'Commercial Display Fridge', watts: 600, category: 'Refrigeration' },
+    
+    // Entertainment
+    { name: 'LED TV (24")', watts: 30, category: 'Entertainment' },
+    { name: 'LED TV (32")', watts: 45, category: 'Entertainment' },
+    { name: 'LED TV (43")', watts: 60, category: 'Entertainment' },
+    { name: 'LED TV (50")', watts: 80, category: 'Entertainment' },
+    { name: 'LED TV (55")', watts: 100, category: 'Entertainment' },
+    { name: 'LED TV (65")', watts: 120, category: 'Entertainment' },
+    { name: 'LED TV (75")', watts: 150, category: 'Entertainment' },
+    { name: 'Plasma TV (50")', watts: 300, category: 'Entertainment' },
+    { name: 'Projector (Home)', watts: 250, category: 'Entertainment' },
+    { name: 'Projector (Commercial)', watts: 400, category: 'Entertainment' },
+    { name: 'Sound System (Home Theater)', watts: 300, category: 'Entertainment' },
+    { name: 'Soundbar', watts: 80, category: 'Entertainment' },
+    { name: 'Gaming Console (PS5/Xbox)', watts: 200, category: 'Entertainment' },
+    { name: 'DVD/Blu-ray Player', watts: 30, category: 'Entertainment' },
+    { name: 'Cable/Satellite Box', watts: 30, category: 'Entertainment' },
+    { name: 'Stereo System', watts: 100, category: 'Entertainment' },
+    
+    // Fans & Ventilation
+    { name: 'Ceiling Fan (Small)', watts: 60, category: 'Fans' },
+    { name: 'Ceiling Fan (Medium)', watts: 75, category: 'Fans' },
+    { name: 'Ceiling Fan (Large)', watts: 90, category: 'Fans' },
+    { name: 'Standing Fan (12")', watts: 50, category: 'Fans' },
+    { name: 'Standing Fan (16")', watts: 60, category: 'Fans' },
+    { name: 'Standing Fan (18")', watts: 75, category: 'Fans' },
+    { name: 'Table Fan', watts: 40, category: 'Fans' },
+    { name: 'Wall Fan', watts: 70, category: 'Fans' },
+    { name: 'Exhaust Fan (Kitchen)', watts: 150, category: 'Fans' },
+    { name: 'Exhaust Fan (Bathroom)', watts: 50, category: 'Fans' },
+    { name: 'Industrial Fan', watts: 200, category: 'Fans' },
+    { name: 'Box Fan', watts: 100, category: 'Fans' },
+    
+    // Lighting
+    { name: 'LED Bulb (5W)', watts: 5, category: 'Lighting' },
+    { name: 'LED Bulb (7W)', watts: 7, category: 'Lighting' },
+    { name: 'LED Bulb (10W)', watts: 10, category: 'Lighting' },
+    { name: 'LED Bulb (15W)', watts: 15, category: 'Lighting' },
+    { name: 'LED Bulb (20W)', watts: 20, category: 'Lighting' },
+    { name: 'CFL Bulb (15W)', watts: 15, category: 'Lighting' },
+    { name: 'CFL Bulb (23W)', watts: 23, category: 'Lighting' },
+    { name: 'Incandescent Bulb (60W)', watts: 60, category: 'Lighting' },
+    { name: 'Incandescent Bulb (100W)', watts: 100, category: 'Lighting' },
+    { name: 'LED Tube Light (18W)', watts: 18, category: 'Lighting' },
+    { name: 'LED Tube Light (36W)', watts: 36, category: 'Lighting' },
+    { name: 'Fluorescent Tube (40W)', watts: 40, category: 'Lighting' },
+    { name: 'Outdoor Security Light', watts: 30, category: 'Lighting' },
+    { name: 'LED Strip Lights (per meter)', watts: 10, category: 'Lighting' },
+    { name: 'Chandelier (LED)', watts: 100, category: 'Lighting' },
+    { name: 'Chandelier (Traditional)', watts: 300, category: 'Lighting' },
+    
+    // Computing & Office
+    { name: 'Laptop (Standard)', watts: 65, category: 'Computing' },
+    { name: 'Laptop (Gaming)', watts: 180, category: 'Computing' },
+    { name: 'Desktop Computer (Basic)', watts: 150, category: 'Computing' },
+    { name: 'Desktop Computer (Standard)', watts: 250, category: 'Computing' },
+    { name: 'Desktop Computer (Gaming)', watts: 450, category: 'Computing' },
+    { name: 'iMac/All-in-One PC', watts: 200, category: 'Computing' },
+    { name: 'Computer Monitor (19")', watts: 30, category: 'Computing' },
+    { name: 'Computer Monitor (24")', watts: 40, category: 'Computing' },
+    { name: 'Computer Monitor (27")', watts: 60, category: 'Computing' },
+    { name: 'Printer (Inkjet)', watts: 50, category: 'Computing' },
+    { name: 'Printer (Laser)', watts: 600, category: 'Computing' },
+    { name: 'Scanner', watts: 30, category: 'Computing' },
+    { name: 'Photocopier', watts: 1500, category: 'Computing' },
+    { name: 'Tablet Charger', watts: 12, category: 'Computing' },
+    { name: 'External Hard Drive', watts: 10, category: 'Computing' },
+    
+    // Kitchen Appliances
+    { name: 'Microwave (Small)', watts: 800, category: 'Kitchen' },
+    { name: 'Microwave (Medium)', watts: 1200, category: 'Kitchen' },
+    { name: 'Microwave (Large)', watts: 1500, category: 'Kitchen' },
+    { name: 'Electric Kettle (1.5L)', watts: 1500, category: 'Kitchen' },
+    { name: 'Electric Kettle (1.8L)', watts: 2000, category: 'Kitchen' },
+    { name: 'Toaster (2-Slice)', watts: 800, category: 'Kitchen' },
+    { name: 'Toaster (4-Slice)', watts: 1500, category: 'Kitchen' },
+    { name: 'Blender', watts: 400, category: 'Kitchen' },
+    { name: 'Food Processor', watts: 600, category: 'Kitchen' },
+    { name: 'Coffee Maker', watts: 1000, category: 'Kitchen' },
+    { name: 'Espresso Machine', watts: 1500, category: 'Kitchen' },
+    { name: 'Rice Cooker (Small)', watts: 400, category: 'Kitchen' },
+    { name: 'Rice Cooker (Large)', watts: 700, category: 'Kitchen' },
+    { name: 'Slow Cooker', watts: 200, category: 'Kitchen' },
+    { name: 'Pressure Cooker (Electric)', watts: 1000, category: 'Kitchen' },
+    { name: 'Air Fryer', watts: 1500, category: 'Kitchen' },
+    { name: 'Dishwasher', watts: 1800, category: 'Kitchen' },
+    { name: 'Electric Stove (Single)', watts: 1500, category: 'Kitchen' },
+    { name: 'Electric Stove (Double)', watts: 3000, category: 'Kitchen' },
+    { name: 'Electric Oven', watts: 2400, category: 'Kitchen' },
+    { name: 'Induction Cooker (Single)', watts: 2000, category: 'Kitchen' },
+    { name: 'Induction Cooker (Double)', watts: 3500, category: 'Kitchen' },
+    { name: 'Deep Fryer', watts: 1800, category: 'Kitchen' },
+    { name: 'Sandwich Maker', watts: 800, category: 'Kitchen' },
+    { name: 'Waffle Maker', watts: 1000, category: 'Kitchen' },
+    { name: 'Juicer', watts: 500, category: 'Kitchen' },
+    { name: 'Mixer/Hand Mixer', watts: 200, category: 'Kitchen' },
+    { name: 'Garbage Disposal', watts: 500, category: 'Kitchen' },
+    
+    // Laundry
+    { name: 'Washing Machine (Top Load)', watts: 500, category: 'Laundry' },
+    { name: 'Washing Machine (Front Load)', watts: 600, category: 'Laundry' },
+    { name: 'Washing Machine (Commercial)', watts: 1500, category: 'Laundry' },
+    { name: 'Dryer (Electric)', watts: 3000, category: 'Laundry' },
+    { name: 'Washer-Dryer Combo', watts: 2000, category: 'Laundry' },
+    { name: 'Iron (Standard)', watts: 1200, category: 'Laundry' },
+    { name: 'Iron (Steam)', watts: 1500, category: 'Laundry' },
+    { name: 'Iron (Industrial)', watts: 2000, category: 'Laundry' },
+    { name: 'Steamer (Clothes)', watts: 1500, category: 'Laundry' },
+    
+    // Water Systems
+    { name: 'Water Pump (0.5HP)', watts: 450, category: 'Water' },
+    { name: 'Water Pump (0.75HP)', watts: 600, category: 'Water' },
+    { name: 'Water Pump (1HP)', watts: 750, category: 'Water' },
+    { name: 'Water Pump (1.5HP)', watts: 1100, category: 'Water' },
+    { name: 'Water Pump (2HP)', watts: 1500, category: 'Water' },
+    { name: 'Submersible Pump', watts: 1000, category: 'Water' },
+    { name: 'Pressure Pump', watts: 800, category: 'Water' },
+    { name: 'Water Dispenser (Cold Only)', watts: 70, category: 'Water' },
+    { name: 'Water Dispenser (Hot & Cold)', watts: 500, category: 'Water' },
+    { name: 'Water Heater (Instant)', watts: 3000, category: 'Water' },
+    { name: 'Water Heater (Tank - Small)', watts: 1500, category: 'Water' },
+    { name: 'Water Heater (Tank - Large)', watts: 3000, category: 'Water' },
+    { name: 'Aquarium Pump', watts: 50, category: 'Water' },
+    { name: 'Pool Pump', watts: 2000, category: 'Water' },
+    
+    // Security & Communication
+    { name: 'CCTV Camera (Analog)', watts: 5, category: 'Security' },
+    { name: 'CCTV Camera (IP)', watts: 10, category: 'Security' },
+    { name: 'CCTV Camera (PTZ)', watts: 40, category: 'Security' },
+    { name: 'DVR/NVR (4 Channel)', watts: 30, category: 'Security' },
+    { name: 'DVR/NVR (8 Channel)', watts: 50, category: 'Security' },
+    { name: 'DVR/NVR (16 Channel)', watts: 80, category: 'Security' },
+    { name: 'Security System Panel', watts: 30, category: 'Security' },
+    { name: 'Motion Sensor', watts: 5, category: 'Security' },
+    { name: 'Door Bell Camera', watts: 10, category: 'Security' },
+    { name: 'Intercom System', watts: 20, category: 'Security' },
+    { name: 'Electric Gate Motor', watts: 300, category: 'Security' },
+    { name: 'Electric Door Lock', watts: 15, category: 'Security' },
+    { name: 'Wi-Fi Router (Standard)', watts: 15, category: 'Communication' },
+    { name: 'Wi-Fi Router (High-Power)', watts: 25, category: 'Communication' },
+    { name: 'Network Switch (8-port)', watts: 10, category: 'Communication' },
+    { name: 'Network Switch (24-port)', watts: 30, category: 'Communication' },
+    { name: 'Modem', watts: 10, category: 'Communication' },
+    { name: 'Cordless Phone Base', watts: 5, category: 'Communication' },
+    
+    // Personal Care
+    { name: 'Hair Dryer', watts: 1500, category: 'Personal Care' },
+    { name: 'Hair Straightener', watts: 200, category: 'Personal Care' },
+    { name: 'Curling Iron', watts: 150, category: 'Personal Care' },
+    { name: 'Electric Shaver', watts: 15, category: 'Personal Care' },
+    { name: 'Electric Toothbrush Charger', watts: 5, category: 'Personal Care' },
+    { name: 'Vacuum Cleaner (Upright)', watts: 1200, category: 'Personal Care' },
+    { name: 'Vacuum Cleaner (Handheld)', watts: 500, category: 'Personal Care' },
+    { name: 'Robot Vacuum', watts: 50, category: 'Personal Care' },
+    { name: 'Sewing Machine', watts: 100, category: 'Personal Care' },
+    
+    // Charging & Mobile
+    { name: 'Phone Charger (5W)', watts: 5, category: 'Charging' },
+    { name: 'Phone Charger (Fast - 18W)', watts: 18, category: 'Charging' },
+    { name: 'Phone Charger (Super Fast - 33W)', watts: 33, category: 'Charging' },
+    { name: 'Wireless Charger', watts: 15, category: 'Charging' },
+    { name: 'Power Bank Charger', watts: 10, category: 'Charging' },
+    { name: 'Multi-Device Charging Station', watts: 60, category: 'Charging' },
+    
+    // Commercial Equipment
+    { name: 'Electric Generator (Backup)', watts: 5000, category: 'Commercial' },
+    { name: 'Welding Machine', watts: 5000, category: 'Commercial' },
+    { name: 'Compressor (Small)', watts: 1500, category: 'Commercial' },
+    { name: 'Compressor (Large)', watts: 3000, category: 'Commercial' },
+    { name: 'Shop Vac', watts: 1400, category: 'Commercial' },
+    { name: 'Power Tools (Drill)', watts: 800, category: 'Commercial' },
+    { name: 'Power Tools (Saw)', watts: 1200, category: 'Commercial' },
+    { name: 'Vending Machine', watts: 400, category: 'Commercial' },
+    { name: 'POS Machine', watts: 20, category: 'Commercial' },
+    { name: 'Cash Register', watts: 50, category: 'Commercial' },
+    { name: 'Electric Shutter/Roll-up Door', watts: 500, category: 'Commercial' },
+    
+    // Medical Equipment
+    { name: 'CPAP Machine', watts: 60, category: 'Medical' },
+    { name: 'Oxygen Concentrator', watts: 350, category: 'Medical' },
+    { name: 'Nebulizer', watts: 100, category: 'Medical' },
+    { name: 'Electric Wheelchair Charger', watts: 200, category: 'Medical' },
+    
+    // Miscellaneous
+    { name: 'Electric Fan Heater', watts: 2000, category: 'Miscellaneous' },
+    { name: 'Humidifier', watts: 50, category: 'Miscellaneous' },
+    { name: 'Air Purifier', watts: 80, category: 'Miscellaneous' },
+    { name: 'Bug Zapper', watts: 20, category: 'Miscellaneous' },
+    { name: 'Electric Blanket', watts: 200, category: 'Miscellaneous' },
+    { name: 'Aquarium Heater', watts: 100, category: 'Miscellaneous' },
+    { name: 'Electric Clock', watts: 2, category: 'Miscellaneous' },
+    { name: 'Digital Photo Frame', watts: 10, category: 'Miscellaneous' },
+    { name: 'Night Light', watts: 5, category: 'Miscellaneous' },
+  ].sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically
 
   const solarPanelBrands = [
     { id: 'ja-solar', name: 'JA Solar (Imported)', wattages: [450, 550, 590] },
@@ -119,6 +321,12 @@ export default function CalculatorPage() {
   const removeAppliance = (id: string) => {
     setAppliances(appliances.filter(a => a.id !== id));
   };
+
+  // Filter appliances based on search
+  const filteredAppliances = commonAppliances.filter(app =>
+    app.name.toLowerCase().includes(applianceSearch.toLowerCase()) ||
+    app.category.toLowerCase().includes(applianceSearch.toLowerCase())
+  );
 
   // Calculations
   const calculateTotalDailyConsumption = () => {
@@ -310,27 +518,51 @@ export default function CalculatorPage() {
                 </div>
 
                 {/* Add Appliance */}
-                <div className="flex gap-2 mb-4">
-                  <select
-                    value={selectedAppliance}
-                    onChange={(e) => setSelectedAppliance(e.target.value)}
-                    className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select an appliance...</option>
-                    {commonAppliances.map((app, idx) => (
-                      <option key={idx} value={app.name}>
-                        {app.name} ({app.watts}W)
+                <div className="space-y-2 mb-4">
+                  {/* Search Input */}
+                  <input
+                    type="text"
+                    placeholder="Search appliances (e.g., 'AC', 'fridge', 'laptop')..."
+                    value={applianceSearch}
+                    onChange={(e) => setApplianceSearch(e.target.value)}
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                  
+                  {/* Appliance Dropdown */}
+                  <div className="flex gap-2">
+                    <select
+                      value={selectedAppliance}
+                      onChange={(e) => setSelectedAppliance(e.target.value)}
+                      className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      size={applianceSearch ? Math.min(filteredAppliances.length + 1, 8) : 1}
+                    >
+                      <option value="">
+                        {applianceSearch 
+                          ? `${filteredAppliances.length} appliance${filteredAppliances.length !== 1 ? 's' : ''} found` 
+                          : 'Select an appliance...'}
                       </option>
-                    ))}
-                  </select>
-                  <button
-                    onClick={addAppliance}
-                    disabled={!selectedAppliance}
-                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors flex items-center gap-2 text-sm"
-                  >
-                    <Plus className="w-4 h-4" />
-                    Add
-                  </button>
+                      {filteredAppliances.map((app, idx) => (
+                        <option key={idx} value={app.name}>
+                          {app.name} ({app.watts}W) - {app.category}
+                        </option>
+                      ))}
+                    </select>
+                    <button
+                      onClick={addAppliance}
+                      disabled={!selectedAppliance}
+                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors flex items-center gap-2 text-sm"
+                    >
+                      <Plus className="w-4 h-4" />
+                      Add
+                    </button>
+                  </div>
+                  
+                  {/* Results count */}
+                  {applianceSearch && (
+                    <div className="text-xs text-gray-500">
+                      Showing {filteredAppliances.length} of {commonAppliances.length} appliances
+                    </div>
+                  )}
                 </div>
 
                 {/* Appliances List */}
