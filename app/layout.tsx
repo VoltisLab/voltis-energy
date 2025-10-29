@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { LocationProvider } from "@/contexts/LocationContext";
+import VoltisAssistant from "@/components/chatbot/VoltisAssistant";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
+          <VoltisAssistant />
         </LocationProvider>
       </body>
     </html>
