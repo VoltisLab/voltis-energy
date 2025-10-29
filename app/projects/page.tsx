@@ -20,7 +20,7 @@ const ProjectsPage = () => {
       co2Offset: '3.2 tons/year',
       description: 'Complete home solar installation with battery storage, providing energy independence and significant cost savings.',
       features: ['SolarEdge inverter', 'Tesla Powerwall 2', 'Smart monitoring', 'Net metering'],
-      image: '/landing/news/cleaner.png',
+      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80',
       gradient: 'from-blue-500 to-blue-700'
     },
     {
@@ -34,7 +34,7 @@ const ProjectsPage = () => {
       co2Offset: '22 tons/year',
       description: 'Large-scale commercial installation powering a tech company\'s headquarters, demonstrating corporate sustainability commitment.',
       features: ['Enphase microinverters', 'Real-time monitoring', 'Employee dashboard', 'Tax incentives'],
-      image: '/landing/news/1.png',
+      image: 'https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=800&q=80',
       gradient: 'from-cyan-500 to-teal-600'
     },
     {
@@ -48,7 +48,7 @@ const ProjectsPage = () => {
       co2Offset: '4.5 tons/year',
       description: 'Premium solar system with battery backup, ensuring continuous power and maximizing self-consumption.',
       features: ['LG Solar panels', 'LG Chem battery', '24/7 backup power', 'Smart home integration'],
-      image: '/landing/news/2.png',
+      image: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80',
       gradient: 'from-green-500 to-emerald-600'
     },
     {
@@ -62,7 +62,7 @@ const ProjectsPage = () => {
       co2Offset: '38 tons/year',
       description: 'Major retail installation reducing operational costs and showcasing environmental leadership to customers.',
       features: ['SolarEdge optimizers', 'Cloud monitoring', 'Roof membrane upgrade', 'Dual inverters'],
-      image: '/landing/test/image1.jpg',
+      image: 'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=800&q=80',
       gradient: 'from-orange-500 to-red-600'
     },
     {
@@ -76,7 +76,7 @@ const ProjectsPage = () => {
       co2Offset: '2.8 tons/year',
       description: 'Efficient solar installation on a smaller home, proving solar works for properties of all sizes.',
       features: ['SunPower panels', 'Enphase IQ8', 'App monitoring', '25-year warranty'],
-      image: '/landing/test/image2.png',
+      image: 'https://images.unsplash.com/photo-1560858138-f083c6ce3b93?w=800&q=80',
       gradient: 'from-purple-500 to-pink-600'
     },
     {
@@ -90,7 +90,7 @@ const ProjectsPage = () => {
       co2Offset: '52 tons/year',
       description: 'Educational facility solar project, teaching students about renewable energy while reducing school operating costs.',
       features: ['Canadian Solar panels', 'SMA inverters', 'Student monitoring access', 'Educational dashboard'],
-      image: '/landing/test/image3.png',
+      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80',
       gradient: 'from-yellow-500 to-orange-500'
     }
   ];
