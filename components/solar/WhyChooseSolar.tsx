@@ -2,6 +2,7 @@
 import { motion, useInView } from 'framer-motion';
 import { Battery, DollarSign, Leaf, TrendingUp, Home, Award } from 'lucide-react';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 const WhyChooseSolar = () => {
   const ref = useRef(null);
