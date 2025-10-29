@@ -27,19 +27,37 @@ const knowledgeBase = {
   // Pricing & Packages
   pricing: {
     keywords: ['price', 'cost', 'how much', 'expensive', 'cheap', 'affordable', 'budget', 'package', 'packages'],
-    response: (currency: string) => `We offer 4 solar packages to fit every budget:\n\n📦 Voltis Basic (1-2 bedroom homes)\n   ${currency}700k - ${currency}1.5M\n\n📦 Voltis Standard (3-4 bedroom/small business)\n   ${currency}1.5M - ${currency}3M ⭐ MOST POPULAR\n\n📦 Voltis Premium (Offices/large homes)\n   ${currency}3M - ${currency}8M\n\n📦 Voltis Custom (Hotels/estates/farms)\n   Custom quote\n\nAll packages include installation, warranty, and aftercare! Would you like to build a custom system using our calculator?`
+    responses: [
+      (currency: string) => `We offer 4 solar packages to fit every budget:\n\n📦 Voltis Basic (1-2 bedroom homes)\n   ${currency}700k - ${currency}1.5M\n\n📦 Voltis Standard (3-4 bedroom/small business)\n   ${currency}1.5M - ${currency}3M ⭐ MOST POPULAR\n\n📦 Voltis Premium (Offices/large homes)\n   ${currency}3M - ${currency}8M\n\n📦 Voltis Custom (Hotels/estates/farms)\n   Custom quote\n\nAll packages include installation, warranty, and aftercare! Would you like to build a custom system using our calculator?`,
+      (currency: string) => `Great question! We've designed packages for every need and budget:\n\n🏠 Voltis Basic - Perfect for small homes (1-2 bedrooms)\n   Starting at ${currency}700k\n\n🏡 Voltis Standard - Our most popular choice (3-4 bedrooms)\n   ${currency}1.5M - ${currency}3M\n\n🏢 Voltis Premium - Ideal for offices and large homes\n   ${currency}3M - ${currency}8M\n\n🏭 Voltis Custom - Tailored for hotels, estates, and farms\n   Custom pricing based on your needs\n\nEvery package comes with professional installation and comprehensive warranties!`,
+      (currency: string) => `Let me break down our pricing for you:\n\n💡 Entry Level (Voltis Basic)\n   ${currency}700k - ${currency}1.5M | Best for 1-2 bedroom homes\n\n⭐ Most Popular (Voltis Standard)\n   ${currency}1.5M - ${currency}3M | Perfect for 3-4 bedrooms or small businesses\n\n🌟 Premium (Voltis Premium)\n   ${currency}3M - ${currency}8M | Designed for offices and larger properties\n\n🎯 Custom Solutions (Voltis Custom)\n   Quote-based | For hotels, industrial, and special projects\n\nAll prices include everything: panels, inverters, batteries, installation, and warranties!`,
+      (currency: string) => `Our packages are designed to be flexible and affordable:\n\n📦 Voltis Basic: ${currency}700k - ${currency}1.5M\n   Great starter package for smaller homes\n\n📦 Voltis Standard: ${currency}1.5M - ${currency}3M\n   The sweet spot - chosen by 60% of our customers!\n\n📦 Voltis Premium: ${currency}3M - ${currency}8M\n   Maximum power for demanding properties\n\n📦 Voltis Custom: Custom quote\n   Fully tailored to your unique requirements\n\nWant to see exactly what you'd need? Try our system builder!`,
+      (currency: string) => `Here's what we offer across different price points:\n\n🔹 Voltis Basic (${currency}700k - ${currency}1.5M)\n   Solar + inverter + battery for compact homes\n\n🔹 Voltis Standard (${currency}1.5M - ${currency}3M)\n   Complete 2-3kVA system - our bestseller!\n\n🔹 Voltis Premium (${currency}3M - ${currency}8M)\n   5kVA+ hybrid systems for larger properties\n\n🔹 Voltis Custom (Quote-based)\n   Engineered solutions for complex installations\n\nAll packages are all-inclusive with installation, warranties, and ongoing support!`
+    ]
   },
 
   // Services
   services: {
     keywords: ['service', 'services', 'what do you do', 'offer', 'provide', 'installation', 'install'],
-    response: "We provide comprehensive solar solutions:\n\n⚡ Residential Installation\n   Complete home solar systems\n\n🏢 Commercial Installation\n   Business & industrial solutions\n\n🔧 Maintenance & Repair\n   Keep your system running optimally\n\n🛡️ System Monitoring\n   Real-time performance tracking\n\n📊 Energy Consulting\n   Maximize your savings\n\nAll with professional installation and warranties!"
+    responses: [
+      "We provide comprehensive solar solutions:\n\n⚡ Residential Installation\n   Complete home solar systems\n\n🏢 Commercial Installation\n   Business & industrial solutions\n\n🔧 Maintenance & Repair\n   Keep your system running optimally\n\n🛡️ System Monitoring\n   Real-time performance tracking\n\n📊 Energy Consulting\n   Maximize your savings\n\nAll with professional installation and warranties!",
+      "We're your complete solar energy partner! Here's what we do:\n\n🏠 Home Solar Systems\n   End-to-end residential installations\n\n💼 Business Solutions\n   Commercial and industrial solar projects\n\n🛠️ Ongoing Maintenance\n   Regular servicing and repairs when needed\n\n📱 Smart Monitoring\n   Track your system's performance 24/7\n\n💡 Expert Consultation\n   Help you get maximum value from solar\n\nEvery service includes our quality guarantee!",
+      "Our services cover everything solar:\n\n✨ Residential Installations\n   Transform your home with clean energy\n\n🏭 Commercial Projects\n   From small offices to large factories\n\n⚙️ System Maintenance\n   Preventive care and quick repairs\n\n🖥️ Performance Monitoring\n   Stay informed about your system's health\n\n📈 Energy Advisory\n   Strategic guidance for optimal savings\n\nProfessional service from start to finish!",
+      "Here's how we help you go solar:\n\n🌞 Residential Solar\n   Custom home installations with premium components\n\n🏢 Commercial Solar\n   Scalable solutions for any business size\n\n🔧 Maintenance Services\n   Keep your investment performing at its best\n\n📊 Real-Time Monitoring\n   Know exactly how much you're saving\n\n💰 Savings Optimization\n   Expert advice to maximize your ROI\n\nComprehensive support at every step!",
+      "We offer full-service solar solutions:\n\n⚡ Home Installations - Complete residential systems designed for your property\n\n🏗️ Commercial Installations - Large-scale projects for businesses\n\n🛡️ Maintenance & Support - Regular check-ups and fast repairs\n\n📡 Smart Monitoring - Track production and savings in real-time\n\n🎓 Energy Consulting - Professional guidance on energy efficiency\n\nAll backed by our installation warranties and expert team!"
+    ]
   },
 
   // Products
   products: {
     keywords: ['product', 'products', 'panel', 'panels', 'inverter', 'inverters', 'battery', 'batteries', 'buy'],
-    response: "We offer premium solar components:\n\n☀️ Solar Panels\n   JA Solar, LONGi, Jinko, Trina, Canadian Solar, SunPower\n   (550W-600W)\n\n⚡ Inverters\n   Deye, Victron, Growatt, SolarEdge\n   (3.6kW-10kW)\n\n🔋 Batteries\n   Lithium-ion & Tubular options\n   (100Ah-200Ah)\n\n🔌 Accessories\n   Cables, mounting systems, charge controllers, monitoring\n\nAll products are imported from leading international manufacturers. Visit our Products page to browse!"
+    responses: [
+      "We offer premium solar components:\n\n☀️ Solar Panels\n   JA Solar, LONGi, Jinko, Trina, Canadian Solar, SunPower\n   (550W-600W)\n\n⚡ Inverters\n   Deye, Victron, Growatt, SolarEdge\n   (3.6kW-10kW)\n\n🔋 Batteries\n   Lithium-ion & Tubular options\n   (100Ah-200Ah)\n\n🔌 Accessories\n   Cables, mounting systems, charge controllers, monitoring\n\nAll products are imported from leading international manufacturers. Visit our Products page to browse!",
+      "We stock top-tier solar equipment:\n\n🌞 Solar Panels (550-600W)\n   Brands: JA Solar, LONGi, Jinko Solar, Trina, Canadian Solar, SunPower\n   All Tier-1 manufacturers with proven reliability\n\n⚡ Hybrid Inverters (3.6-10kW)\n   Deye, Victron Energy, Growatt, SolarEdge\n   Smart functionality with battery compatibility\n\n🔋 Battery Storage\n   Premium Lithium-ion (10+ year life)\n   Budget-friendly Tubular Lead-Acid\n   100Ah to 200Ah capacities\n\n🛠️ Complete Accessories\n   Everything needed for installation and monitoring\n\nBrowse our full catalog on the Products page!",
+      "Our product range includes:\n\n☀️ Premium Solar Panels\n   High-efficiency monocrystalline panels\n   JA Solar • LONGi • Jinko • Trina • Canadian Solar • SunPower\n   550-600 watts per panel\n\n⚡ Smart Inverters\n   Hybrid systems with MPPT technology\n   Deye • Victron • Growatt • SolarEdge\n   3.6kW to 10kW range\n\n🔋 Energy Storage\n   Lithium-ion: lightweight, long-lasting, efficient\n   Tubular: cost-effective, reliable\n\n🔧 Installation Components\n   Cables, brackets, controllers, and monitoring systems\n\nAll imported directly from manufacturers!",
+      "Here's what we have in stock:\n\n🌟 Solar Panels - Premium international brands\n   JA Solar, LONGi, Jinko, Trina, Canadian Solar, SunPower\n   Power output: 550W to 600W per panel\n   25-year performance warranty\n\n⚙️ Inverter Systems - Top manufacturers\n   Deye, Victron Energy, Growatt, SolarEdge\n   Capacity: 3.6kW to 10kW\n   Hybrid functionality for grid + battery\n\n🔋 Battery Banks - Multiple technologies\n   Lithium-ion (best performance)\n   Tubular Lead-Acid (best value)\n   Sizes: 100Ah to 200Ah\n\n🛒 Check out our Products page for detailed specs and pricing!",
+      "We carry industry-leading components:\n\n☀️ Solar Panels\n   World-class brands: JA Solar, LONGi, Jinko, Trina, Canadian Solar, SunPower\n   High-efficiency panels (550-600W)\n   Excellent low-light performance\n\n⚡ Inverters\n   Reliable brands: Deye, Victron, Growatt, SolarEdge\n   Smart hybrid inverters (3.6-10kW)\n   Built-in MPPT charge controllers\n\n🔋 Batteries\n   Lithium-ion: premium, long-life option\n   Tubular: economical, proven technology\n   Various capacities to match your needs\n\n🔌 Complete your system with quality cables, mounts, and monitoring!\n\nVisit our Products page to explore the full range!"
+    ]
   },
 
   // Calculator/System Builder
@@ -148,19 +166,35 @@ export default function VoltisAssistant() {
       const hasMatch = keywords.some(keyword => lowerQuery.includes(keyword));
       
       if (hasMatch) {
-        const response = 'response' in category ? category.response : '';
+        const response = 'response' in category ? category.response : null;
+        const responses = 'responses' in category ? category.responses : null;
         
-        // Handle dynamic responses (like pricing)
-        if (typeof response === 'function') {
-          return response(currencySymbol);
+        // Handle array of responses (multiple variations)
+        if (responses && Array.isArray(responses)) {
+          const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+          
+          // Handle dynamic responses (like pricing functions)
+          if (typeof randomResponse === 'function') {
+            return randomResponse(currencySymbol);
+          }
+          
+          return randomResponse as string;
         }
         
-        // Handle array responses (like greetings)
-        if (Array.isArray(response)) {
-          return response[Math.floor(Math.random() * response.length)];
+        // Handle single response (backward compatibility)
+        if (response) {
+          // Handle dynamic responses (like pricing)
+          if (typeof response === 'function') {
+            return response(currencySymbol);
+          }
+          
+          // Handle array responses (like greetings)
+          if (Array.isArray(response)) {
+            return response[Math.floor(Math.random() * response.length)];
+          }
+          
+          return response as string;
         }
-        
-        return response as string;
       }
     }
     
@@ -258,13 +292,13 @@ export default function VoltisAssistant() {
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center overflow-hidden p-1">
                   <Image 
                     src="/voltis-logo.svg" 
                     alt="Voltis Energy" 
-                    width={32} 
-                    height={32}
-                    className="object-contain"
+                    width={40} 
+                    height={40}
+                    className="object-cover w-full h-full"
                   />
                 </div>
                 <div>
