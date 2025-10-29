@@ -512,10 +512,10 @@ export default function CalculatorPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border-2 border-green-200"
+                className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-200"
               >
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                     <ShoppingCart className="w-5 h-5 text-white" />
                   </div>
                   <h2 className="text-xl font-bold text-gray-900">Your Appliances</h2>
@@ -554,7 +554,7 @@ export default function CalculatorPage() {
                     <button
                       onClick={addAppliance}
                       disabled={!selectedAppliance}
-                      className="px-6 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg hover:from-green-700 hover:to-emerald-700 disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed transition-all transform hover:scale-105 flex items-center gap-2 text-sm font-semibold"
+                      className="px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg hover:from-blue-700 hover:to-cyan-700 disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed transition-all transform hover:scale-105 flex items-center gap-2 text-sm font-semibold"
                     >
                       <Plus className="w-4 h-4" />
                       Add
@@ -577,7 +577,7 @@ export default function CalculatorPage() {
                 ) : (
                   <div className="space-y-3 max-h-96 overflow-y-auto">
                     {appliances.map((app) => (
-                      <div key={app.id} className="bg-white rounded-lg p-4 border-2 border-green-100 hover:border-green-300 transition-colors">
+                      <div key={app.id} className="bg-white rounded-lg p-4 border-2 border-blue-100 hover:border-blue-300 transition-colors">
                         <div className="flex items-start justify-between mb-2">
                           <div className="flex-1">
                             <div className="font-medium text-sm text-gray-900">{app.name}</div>
@@ -635,10 +635,10 @@ export default function CalculatorPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border-2 border-yellow-200"
+                className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-200"
               >
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                     <Sun className="w-5 h-5 text-white" />
                   </div>
                   <h2 className="text-xl font-bold text-gray-900">Solar Panels</h2>
@@ -694,8 +694,8 @@ export default function CalculatorPage() {
                     />
                   </div>
                 </div>
-                <div className="text-sm text-gray-900 bg-gradient-to-r from-yellow-100 to-orange-100 p-3 rounded-lg border border-yellow-200 mt-3">
-                  <span className="text-gray-700">Total Panel Power:</span> <span className="font-bold text-yellow-700">{totalPanelPower.toFixed(2)} kW</span>
+                <div className="text-sm text-gray-900 bg-gradient-to-r from-blue-100 to-cyan-100 p-3 rounded-lg border border-blue-200 mt-3">
+                  <span className="text-gray-700">Total Panel Power:</span> <span className="font-bold text-blue-700">{totalPanelPower.toFixed(2)} kW</span>
                 </div>
               </motion.div>
 
@@ -704,10 +704,10 @@ export default function CalculatorPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-200"
+                className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-200"
               >
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                     <Battery className="w-5 h-5 text-white" />
                   </div>
                   <h2 className="text-xl font-bold text-gray-900">Battery Storage</h2>
@@ -781,8 +781,8 @@ export default function CalculatorPage() {
                     />
                   </div>
                 </div>
-                <div className="text-sm text-gray-900 bg-gradient-to-r from-purple-100 to-pink-100 p-3 rounded-lg border border-purple-200">
-                  <span className="text-gray-700">Total Storage:</span> <span className="font-bold text-purple-700">{totalBatteryCapacity.toFixed(2)} kWh</span>
+                <div className="text-sm text-gray-900 bg-gradient-to-r from-blue-100 to-cyan-100 p-3 rounded-lg border border-blue-200">
+                  <span className="text-gray-700">Total Storage:</span> <span className="font-bold text-blue-700">{totalBatteryCapacity.toFixed(2)} kWh</span>
                 </div>
               </motion.div>
 
@@ -791,10 +791,10 @@ export default function CalculatorPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border-2 border-indigo-200"
+                className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border-2 border-blue-200"
               >
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                     <Zap className="w-5 h-5 text-white" />
                   </div>
                   <h2 className="text-xl font-bold text-gray-900">Inverter & Controls</h2>
@@ -846,8 +846,8 @@ export default function CalculatorPage() {
                     </label>
                   </div>
 
-                  <div className="text-sm text-gray-900 bg-gradient-to-r from-indigo-100 to-blue-100 p-4 rounded-lg border border-indigo-200 mt-3">
-                    <div className="font-bold text-indigo-700 mb-1">⚡ Output Voltage: {config.outputVoltage}V AC</div>
+                  <div className="text-sm text-gray-900 bg-gradient-to-r from-blue-100 to-cyan-100 p-4 rounded-lg border border-blue-200 mt-3">
+                    <div className="font-bold text-blue-700 mb-1">⚡ Output Voltage: {config.outputVoltage}V AC</div>
                     <div className="text-xs text-gray-600">Standard for Nigeria (matches grid voltage)</div>
                   </div>
                 </div>
