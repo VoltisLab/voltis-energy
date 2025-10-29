@@ -694,8 +694,8 @@ export default function CalculatorPage() {
                     />
                   </div>
                 </div>
-                <div className="mt-3 text-xs text-gray-600 bg-blue-50 p-2 rounded">
-                  Total Panel Power: <span className="font-semibold">{totalPanelPower.toFixed(2)} kW</span>
+                <div className="text-sm text-gray-900 bg-gradient-to-r from-yellow-100 to-orange-100 p-3 rounded-lg border border-yellow-200 mt-3">
+                  <span className="text-gray-700">Total Panel Power:</span> <span className="font-bold text-yellow-700">{totalPanelPower.toFixed(2)} kW</span>
                 </div>
               </motion.div>
 
