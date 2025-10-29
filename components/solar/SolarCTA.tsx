@@ -124,7 +124,7 @@ const SolarCTA = () => {
             <div>
               <div className="text-3xl mb-2">✓</div>
               <div className="font-semibold mb-1">Expert Guidance</div>
-              <div className="text-sm text-blue-200">25+ years of experience</div>
+              <div className="text-sm text-blue-200">10+ years of experience</div>
             </div>
           </div>
         </motion.div>
