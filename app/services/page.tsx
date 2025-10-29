@@ -30,7 +30,7 @@ const ServicesPage = () => {
         'Lock in energy costs for 25+ years',
         'Reduce carbon footprint by 4+ tons/year'
       ],
-      pricing: 5500,
+      pricing: 400,
       pricingPrefix: 'From',
       gradient: 'from-blue-500 to-blue-700',
       link: '/contact'
@@ -100,7 +100,7 @@ const ServicesPage = () => {
         'Quick issue resolution',
         '24/7 support available'
       ],
-      pricing: 'From £150/year',
+      pricing: 'From £75/year',
       gradient: 'from-green-500 to-emerald-600',
       link: '/contact'
     },
@@ -146,7 +146,7 @@ const ServicesPage = () => {
         'Optimize energy usage',
         'Maximize self-consumption'
       ],
-      pricing: 'From £8,500 (battery)',
+      pricing: 'From £600 (battery)',
       gradient: 'from-yellow-500 to-orange-500',
       link: '/contact'
     }
