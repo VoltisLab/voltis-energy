@@ -63,13 +63,25 @@ const knowledgeBase = {
   // Calculator/System Builder
   calculator: {
     keywords: ['calculator', 'build', 'configure', 'design', 'custom', 'inverter', 'kva', 'watts'],
-    response: "Use our Build an Inverter tool to design your perfect solar system!\n\nYou can customize:\n\n✅ Property type (residential/commercial)\n✅ Appliances & power needs\n✅ Solar panel brand & quantity\n✅ Battery type & storage capacity\n✅ Inverter configuration\n✅ Grid type (off-grid/hybrid)\n\nGet instant cost estimates and savings projections. Want me to guide you there?"
+    responses: [
+      "Use our Build an Inverter tool to design your perfect solar system!\n\nYou can customize:\n\n✅ Property type (residential/commercial)\n✅ Appliances & power needs\n✅ Solar panel brand & quantity\n✅ Battery type & storage capacity\n✅ Inverter configuration\n✅ Grid type (off-grid/hybrid)\n\nGet instant cost estimates and savings projections. Want me to guide you there?",
+      "Our system builder makes it easy to design your perfect setup!\n\n🏠 Choose your property type\n⚡ Select your appliances\n☀️ Pick solar panel brands\n🔋 Configure battery storage\n⚙️ Choose inverter specs\n🔌 Select grid/off-grid mode\n\nThe calculator gives you instant pricing and ROI estimates. Ready to try it?",
+      "Design your custom solar system with our interactive tool!\n\nYou'll configure:\n• Residential or commercial setup\n• Your specific appliance needs\n• Solar panel quantity and brand\n• Battery type and capacity\n• Inverter specifications\n• Hybrid or off-grid operation\n\nSee real-time cost calculations and savings projections!",
+      "Let me show you our system builder - it's super intuitive!\n\n✨ Start by selecting property type\n✨ Add all your appliances (AC, fridge, etc.)\n✨ Choose from top solar panel brands\n✨ Select battery type (lithium/tubular)\n✨ Configure your inverter\n✨ Pick grid connection type\n\nGet your complete system spec and pricing in minutes!",
+      "Our Build an Inverter tool is perfect for custom quotes!\n\nCustomize everything:\n🏡 Property type and size\n💡 Power consumption (add appliances)\n🌞 Panel brand and wattage\n🔋 Battery technology and storage\n⚡ Inverter capacity and features\n🔌 Grid integration preferences\n\nInstant estimates with detailed breakdowns. Try it now!"
+    ]
   },
 
   // Savings & ROI
   savings: {
     keywords: ['save', 'savings', 'roi', 'return', 'payback', 'investment', 'worth it'],
-    response: "Solar is a smart investment! 💰\n\n📈 Typical ROI\n   6-10 year payback period\n\n💵 25-year savings\n   Often exceed £20,000+\n\n⚡ Energy independence\n   Free electricity after payback\n\n📉 Bill reduction\n   50-100% depending on system\n\nYour exact savings depend on your energy usage, system size, and location. Use our calculator for personalized estimates!"
+    responses: [
+      "Solar is a smart investment! 💰\n\n📈 Typical ROI\n   6-10 year payback period\n\n💵 25-year savings\n   Often exceed £20,000+\n\n⚡ Energy independence\n   Free electricity after payback\n\n📉 Bill reduction\n   50-100% depending on system\n\nYour exact savings depend on your energy usage, system size, and location. Use our calculator for personalized estimates!",
+      "The numbers speak for themselves! 📊\n\n💰 Payback Time: 6-10 years typically\n📈 Long-term Value: £20,000+ over system lifetime\n⚡ Energy Bills: Reduce by 50-100%\n🌞 Free Power: After ROI, it's all profit!\n\nFactor in rising electricity costs and you're looking at serious long-term savings. Want a personalized calculation?",
+      "Solar pays for itself - here's how:\n\n✅ Break even in 6-10 years\n✅ Save £20,000+ over 25 years\n✅ Cut energy bills significantly\n✅ Enjoy free electricity after payback\n✅ Increase property value\n\nThe bigger your system and usage, the better the returns!",
+      "Let me break down the financial benefits:\n\n💡 Initial Investment: Pay off in 6-10 years\n💡 Lifetime Savings: Typically £20,000+\n💡 Monthly Bills: Drop by 50-100%\n💡 Post-Payback: Pure savings for 15+ years\n💡 Energy Security: Protection from rate hikes\n\nSolar is one of the best home improvements for ROI!",
+      "Here's what makes solar financially attractive:\n\n🎯 Quick Payback: Most systems pay for themselves in 6-10 years\n🎯 Massive Savings: £20,000+ in total savings\n🎯 Bill Elimination: 50-100% reduction\n🎯 Extended Benefits: 15-20 years of free electricity\n🎯 Property Value: Increases resale value\n\nUse our calculator to see YOUR specific savings potential!"
+    ]
   },
 
   // Installation & Process
