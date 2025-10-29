@@ -250,10 +250,10 @@ const ProjectsPage = () => {
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { type: 'Residential', count: '3,200+', icon: '🏠' },
-              { type: 'Commercial', count: '950+', icon: '🏢' },
-              { type: 'Industrial', count: '420+', icon: '🏭' },
-              { type: 'Agricultural', count: '430+', icon: '🚜' }
+              { type: 'Residential', count: '70+', icon: '🏠' },
+              { type: 'Commercial', count: '30+', icon: '🏢' },
+              { type: 'Industrial', count: '12+', icon: '🏭' },
+              { type: 'Agricultural', count: '8+', icon: '🚜' }
             ].map((category, index) => (
               <motion.div
                 key={index}
@@ -286,7 +286,7 @@ const ProjectsPage = () => {
               Your Project Could Be Next
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied customers who have made the switch to solar
+              Join over 120 satisfied customers who have made the switch to solar
             </p>
             <Link href="/contact">
               <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105">
