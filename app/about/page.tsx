@@ -20,14 +20,14 @@ const AboutPage = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Powering a Sustainable Future
+              Transforming Africa with Renewable Energy
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8">
-              Leading the renewable energy revolution one solar installation at a time
+              Leading the solar revolution across Africa - one installation at a time
             </p>
             <div className="flex justify-center gap-12 mt-12">
               <div>
-                <div className="text-4xl font-bold text-yellow-400">25+</div>
+                <div className="text-4xl font-bold text-yellow-400">10+</div>
                 <div className="text-blue-200">Years Experience</div>
               </div>
               <div>
@@ -57,13 +57,13 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Founded in 2015, Voltis Energy began with a simple mission: make clean, renewable energy accessible to everyone. What started as a small team of passionate engineers has grown into one of the UK's leading solar installation companies.
+                  Founded in 2015, Voltis Energy began with an ambitious vision: to transform Africa's energy landscape through renewable solar power. What started as a small team of passionate engineers has grown into a leading solar installation company operating across Nigeria, Ghana, South Africa, and the United Kingdom.
                 </p>
                 <p>
-                  Over the past decade, we've witnessed the transformation of the solar industry - from niche technology to mainstream solution. We've been at the forefront of this revolution, constantly innovating and adapting to bring our customers the best solar technology available.
+                  Over the past decade, we've witnessed Africa's incredible solar potential - abundant sunshine, growing energy demand, and a determination to leapfrog fossil fuels. We've been at the forefront of this renewable revolution, bringing world-class solar technology to homes, businesses, and communities across the continent.
                 </p>
                 <p>
-                  Today, we've installed over 120 solar systems across the UK, helping families and businesses reduce their carbon footprint while saving money on energy costs. Every installation represents our commitment to a cleaner, more sustainable future.
+                  Today, we've installed over 120 solar systems across Africa, empowering families and businesses with reliable, clean energy while driving economic growth. Every installation represents our commitment to energy independence, sustainability, and a brighter African future.
                 </p>
               </div>
             </motion.div>
@@ -114,14 +114,14 @@ const AboutPage = () => {
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                To accelerate the world's transition to sustainable energy by making solar power accessible, affordable, and reliable for homes and businesses across the UK.
+                To electrify Africa with clean, renewable solar energy - making power accessible, affordable, and reliable for every home, business, and community across the continent.
               </p>
               <ul className="space-y-3">
                 {[
-                  'Provide premium solar solutions at competitive prices',
-                  'Deliver exceptional customer service and support',
-                  'Promote environmental sustainability through clean energy',
-                  'Educate communities about renewable energy benefits'
+                  'Bridge Africa\'s energy gap with premium solar solutions',
+                  'Deliver world-class service and lifelong support',
+                  'Drive economic growth through energy independence',
+                  'Empower African communities with renewable technology'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></div>
@@ -143,14 +143,14 @@ const AboutPage = () => {
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Vision</h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                A future where every home and business is powered by clean, renewable solar energy, creating a sustainable world for generations to come.
+                An Africa powered entirely by the sun - where every home and business has access to clean, reliable, affordable solar energy, unlocking the continent's limitless potential.
               </p>
               <ul className="space-y-3">
                 {[
-                  'Lead the UK in solar installations by 2030',
-                  'Achieve 100MW of installed capacity',
-                  'Pioneer innovative solar + storage solutions',
-                  'Create a carbon-neutral future for all'
+                  'Lead Africa\'s solar revolution by 2030',
+                  'Install 500MW+ capacity across the continent',
+                  'Pioneer innovative solar + storage solutions for African needs',
+                  'Create energy independence and prosperity for all'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></div>

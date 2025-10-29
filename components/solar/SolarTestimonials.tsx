@@ -9,40 +9,40 @@ const SolarTestimonials = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Thompson',
-      location: 'Manchester, UK',
+      name: 'Chidinma Okonkwo',
+      location: 'Lagos, Nigeria 🇳🇬',
       system: '6.5kW Residential System',
       image: '/landing/team/team1.png',
       rating: 5,
-      text: 'Switching to solar with Pebble was the best decision for our home. Our electricity bills dropped by 65% in the first year, and the installation process was incredibly smooth. The team was professional and answered all our questions.',
-      savings: '£1,200/year'
+      text: 'Voltis Energy transformed our home! No more generator noise, no more fuel costs, just clean, silent power 24/7. Our electricity bills are now a fraction of what we used to pay. The installation was professional and they trained us on everything.',
+      savings: '₦2.3M/year'
     },
     {
-      name: 'James O\'Connor',
-      location: 'Birmingham, UK',
+      name: 'Kwame Mensah',
+      location: 'Accra, Ghana 🇬🇭',
       system: '12kW Commercial System',
       image: '/landing/team/team2.png',
       rating: 5,
-      text: 'As a business owner, the ROI from our solar installation exceeded expectations. Not only are we saving significantly on energy costs, but our customers appreciate our commitment to sustainability. Pebble handled everything seamlessly.',
-      savings: '£3,500/year'
+      text: 'As a business owner dealing with frequent power cuts, solar was the best investment I ever made. My operations run smoothly now, and I\'m saving massively on diesel costs. Voltis Energy delivered beyond expectations - true professionals!',
+      savings: '₵12,500/year'
     },
     {
-      name: 'Emma Davies',
-      location: 'London, UK',
+      name: 'Thandi Nkosi',
+      location: 'Johannesburg, South Africa 🇿🇦',
       system: '8kW with Battery Storage',
       image: '/landing/team/team3.png',
       rating: 5,
-      text: 'The battery storage system gives us complete peace of mind. We\'re now generating and storing our own energy, and we haven\'t had a power outage affect us since installation. The monitoring app is fantastic too!',
-      savings: '£1,800/year'
+      text: 'Load shedding used to disrupt everything - work, cooking, even our kids\' homework. Since Voltis installed our solar + battery system, we don\'t even notice when the grid goes down. It\'s been life-changing for our family!',
+      savings: 'R42,000/year'
     },
     {
-      name: 'Michael Chen',
-      location: 'Leeds, UK',
-      system: '5kW Residential System',
+      name: 'Adewale Ibrahim',
+      location: 'Abuja, Nigeria 🇳🇬',
+      system: '10kW Residential System',
       image: '/landing/team/team4.png',
       rating: 5,
-      text: 'From consultation to activation, the entire process took just 4 weeks. The Pebble team was knowledgeable, punctual, and left our property spotless. Our solar panels look great and perform even better!',
-      savings: '£950/year'
+      text: 'I was skeptical at first, but Voltis Energy proved solar works perfectly in Africa. Installation took just 3 days, and I\'ve had zero issues in 8 months. My neighbors are now asking for their contact! Highly recommend to every Nigerian homeowner.',
+      savings: '₦3.2M/year'
     }
   ];
 
