@@ -12,6 +12,7 @@ const Header = () => {
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'Build an Inverter', href: '/calculator' },
+    { label: 'Solar Packages', href: '/packages' },
     { label: 'Services', href: '/services' },
     { label: 'Products', href: '/products' },
     { label: 'Projects', href: '/projects' },
