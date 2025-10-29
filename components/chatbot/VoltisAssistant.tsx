@@ -27,85 +27,85 @@ const knowledgeBase = {
   // Pricing & Packages
   pricing: {
     keywords: ['price', 'cost', 'how much', 'expensive', 'cheap', 'affordable', 'budget', 'package', 'packages'],
-    response: (currency: string) => `We offer 4 solar packages to fit every budget:\n\n📦 **Voltis Basic** (1-2 bedroom homes): ${currency}700k-${currency}1.5M\n📦 **Voltis Standard** (3-4 bedroom/small business): ${currency}1.5M-${currency}3M - MOST POPULAR!\n📦 **Voltis Premium** (Offices/large homes): ${currency}3M-${currency}8M\n📦 **Voltis Custom** (Hotels/estates/farms): Custom quote\n\nAll packages include installation, warranty, and aftercare! Would you like to build a custom system using our calculator?`
+    response: (currency: string) => `We offer 4 solar packages to fit every budget:\n\n📦 Voltis Basic (1-2 bedroom homes)\n   ${currency}700k - ${currency}1.5M\n\n📦 Voltis Standard (3-4 bedroom/small business)\n   ${currency}1.5M - ${currency}3M ⭐ MOST POPULAR\n\n📦 Voltis Premium (Offices/large homes)\n   ${currency}3M - ${currency}8M\n\n📦 Voltis Custom (Hotels/estates/farms)\n   Custom quote\n\nAll packages include installation, warranty, and aftercare! Would you like to build a custom system using our calculator?`
   },
 
   // Services
   services: {
     keywords: ['service', 'services', 'what do you do', 'offer', 'provide', 'installation', 'install'],
-    response: "We provide comprehensive solar solutions:\n\n⚡ **Residential Installation** - Complete home solar systems\n🏢 **Commercial Installation** - Business & industrial solutions\n🔧 **Maintenance & Repair** - Keep your system running optimally\n🛡️ **System Monitoring** - Real-time performance tracking\n📊 **Energy Consulting** - Maximize your savings\n\nAll with professional installation and warranties!"
+    response: "We provide comprehensive solar solutions:\n\n⚡ Residential Installation\n   Complete home solar systems\n\n🏢 Commercial Installation\n   Business & industrial solutions\n\n🔧 Maintenance & Repair\n   Keep your system running optimally\n\n🛡️ System Monitoring\n   Real-time performance tracking\n\n📊 Energy Consulting\n   Maximize your savings\n\nAll with professional installation and warranties!"
   },
 
   // Products
   products: {
     keywords: ['product', 'products', 'panel', 'panels', 'inverter', 'inverters', 'battery', 'batteries', 'buy'],
-    response: "We offer premium solar components:\n\n☀️ **Solar Panels**: JA Solar, LONGi, Jinko, Trina, Canadian Solar, SunPower (550W-600W)\n⚡ **Inverters**: Deye, Victron, Growatt, SolarEdge (3.6kW-10kW)\n🔋 **Batteries**: Lithium-ion & Tubular options (100Ah-200Ah)\n🔌 **Accessories**: Cables, mounting systems, charge controllers, monitoring\n\nAll products are imported from leading international manufacturers. Visit our Products page to browse!"
+    response: "We offer premium solar components:\n\n☀️ Solar Panels\n   JA Solar, LONGi, Jinko, Trina, Canadian Solar, SunPower\n   (550W-600W)\n\n⚡ Inverters\n   Deye, Victron, Growatt, SolarEdge\n   (3.6kW-10kW)\n\n🔋 Batteries\n   Lithium-ion & Tubular options\n   (100Ah-200Ah)\n\n🔌 Accessories\n   Cables, mounting systems, charge controllers, monitoring\n\nAll products are imported from leading international manufacturers. Visit our Products page to browse!"
   },
 
   // Calculator/System Builder
   calculator: {
     keywords: ['calculator', 'build', 'configure', 'design', 'custom', 'inverter', 'kva', 'watts'],
-    response: "Use our **Build an Inverter** tool to design your perfect solar system!\n\nYou can customize:\n✅ Property type (residential/commercial)\n✅ Appliances & power needs\n✅ Solar panel brand & quantity\n✅ Battery type & storage capacity\n✅ Inverter configuration\n✅ Grid type (off-grid/hybrid)\n\nGet instant cost estimates and savings projections. Want me to guide you there?"
+    response: "Use our Build an Inverter tool to design your perfect solar system!\n\nYou can customize:\n\n✅ Property type (residential/commercial)\n✅ Appliances & power needs\n✅ Solar panel brand & quantity\n✅ Battery type & storage capacity\n✅ Inverter configuration\n✅ Grid type (off-grid/hybrid)\n\nGet instant cost estimates and savings projections. Want me to guide you there?"
   },
 
   // Savings & ROI
   savings: {
     keywords: ['save', 'savings', 'roi', 'return', 'payback', 'investment', 'worth it'],
-    response: "Solar is a smart investment! 💰\n\n📈 **Typical ROI**: 6-10 year payback period\n💵 **25-year savings**: Often exceed £20,000+\n⚡ **Energy independence**: Free electricity after payback\n📉 **Bill reduction**: 50-100% depending on system\n\nYour exact savings depend on your energy usage, system size, and location. Use our calculator for personalized estimates!"
+    response: "Solar is a smart investment! 💰\n\n📈 Typical ROI\n   6-10 year payback period\n\n💵 25-year savings\n   Often exceed £20,000+\n\n⚡ Energy independence\n   Free electricity after payback\n\n📉 Bill reduction\n   50-100% depending on system\n\nYour exact savings depend on your energy usage, system size, and location. Use our calculator for personalized estimates!"
   },
 
   // Installation & Process
   installation: {
     keywords: ['install', 'installation', 'process', 'how long', 'time', 'steps', 'procedure'],
-    response: "Our installation process is simple:\n\n1️⃣ **Free Consultation** - We assess your needs\n2️⃣ **Site Survey** - Technical evaluation\n3️⃣ **Custom Design** - Tailored system proposal\n4️⃣ **Professional Installation** - Expert team (1-3 days)\n5️⃣ **System Activation** - Testing & handover\n6️⃣ **Ongoing Support** - Monitoring & maintenance\n\nTypical installation takes 1-3 days depending on system size!"
+    response: "Our installation process is simple:\n\n1️⃣ Free Consultation\n   We assess your needs\n\n2️⃣ Site Survey\n   Technical evaluation\n\n3️⃣ Custom Design\n   Tailored system proposal\n\n4️⃣ Professional Installation\n   Expert team (1-3 days)\n\n5️⃣ System Activation\n   Testing & handover\n\n6️⃣ Ongoing Support\n   Monitoring & maintenance\n\nTypical installation takes 1-3 days depending on system size!"
   },
 
   // Warranty & Support
   warranty: {
     keywords: ['warranty', 'guarantee', 'support', 'maintenance', 'repair', 'help', 'service'],
-    response: "We stand behind our work! 🛡️\n\n✅ **25-year panel warranty** - Manufacturer backed\n✅ **2-year installation warranty** - Our workmanship\n✅ **10-year inverter warranty** - Premium brands\n✅ **Free monitoring system** - Track performance 24/7\n✅ **Maintenance packages** - Keep running optimally\n\nWe're here for the long haul - your partner in clean energy!"
+    response: "We stand behind our work! 🛡️\n\n✅ 25-year panel warranty\n   Manufacturer backed\n\n✅ 2-year installation warranty\n   Our workmanship\n\n✅ 10-year inverter warranty\n   Premium brands\n\n✅ Free monitoring system\n   Track performance 24/7\n\n✅ Maintenance packages\n   Keep running optimally\n\nWe're here for the long haul - your partner in clean energy!"
   },
 
   // Locations & Coverage
   locations: {
     keywords: ['location', 'where', 'country', 'countries', 'area', 'region', 'coverage'],
-    response: "We proudly serve 4 countries:\n\n🇬🇧 **United Kingdom**\n🇿🇦 **South Africa**\n🇬🇭 **Ghana**\n🇳🇬 **Nigeria**\n\nPricing automatically converts to your local currency. Use the location selector at the top right to switch regions!"
+    response: "We proudly serve 4 countries:\n\n🇬🇧 United Kingdom\n🇿🇦 South Africa\n🇬🇭 Ghana\n🇳🇬 Nigeria\n\nPricing automatically converts to your local currency. Use the location selector at the top right to switch regions!"
   },
 
   // Projects/Portfolio
   projects: {
     keywords: ['project', 'projects', 'portfolio', 'examples', 'previous work', 'past work', 'gallery'],
-    response: "We've completed 150+ successful installations!\n\n🏡 Residential homes - 2kW to 15kW systems\n🏢 Commercial buildings - Up to 100kW\n🏭 Industrial facilities - Custom solutions\n\nCheck our **Projects page** to see real installations with detailed specs, costs, and annual savings. Every project showcases our commitment to quality!"
+    response: "We've completed 150+ successful installations!\n\n🏡 Residential homes\n   2kW to 15kW systems\n\n🏢 Commercial buildings\n   Up to 100kW\n\n🏭 Industrial facilities\n   Custom solutions\n\nCheck our Projects page to see real installations with detailed specs, costs, and annual savings. Every project showcases our commitment to quality!"
   },
 
   // Contact & Quote
   contact: {
     keywords: ['contact', 'call', 'email', 'phone', 'reach', 'quote', 'consultation', 'talk', 'speak'],
-    response: "Ready to get started? Let's connect! 📞\n\n📧 **Email**: solar@voltisenergy.com\n📞 **Phone**: 0800 123 4567\n\n💬 **Free Consultation**: Schedule a no-obligation consultation\n📋 **Get Quote**: Use our contact form for detailed quotes\n\nWe typically respond within 24 hours. Looking forward to powering your future!"
+    response: "Ready to get started? Let's connect! 📞\n\n📧 Email\n   solar@voltisenergy.com\n\n📞 Phone\n   0800 123 4567\n\n💬 Free Consultation\n   Schedule a no-obligation consultation\n\n📋 Get Quote\n   Use our contact form for detailed quotes\n\nWe typically respond within 24 hours. Looking forward to powering your future!"
   },
 
   // FAQ
   faq: {
     keywords: ['faq', 'question', 'questions', 'common', 'frequently asked', 'help'],
-    response: "Got questions? We've got answers! 🤔\n\nOur FAQ covers:\n• Solar basics & how it works\n• Cost & financing options\n• Performance & savings\n• Installation & maintenance\n• Technical specifications\n\nVisit our **FAQ page** for detailed answers, or ask me anything specific!"
+    response: "Got questions? We've got answers! 🤔\n\nOur FAQ covers:\n\n• Solar basics & how it works\n• Cost & financing options\n• Performance & savings\n• Installation & maintenance\n• Technical specifications\n\nVisit our FAQ page for detailed answers, or ask me anything specific!"
   },
 
   // Technology & How Solar Works
   technology: {
     keywords: ['how does', 'work', 'technology', 'solar', 'photovoltaic', 'energy', 'power'],
-    response: "Solar is brilliant technology! ☀️\n\n1. **Solar panels** capture sunlight\n2. **Convert to DC electricity** via photovoltaic cells\n3. **Inverter** converts DC to usable AC power\n4. **Battery storage** (optional) stores excess energy\n5. **Power your home/business** with clean energy\n6. **Excess to grid** (hybrid systems) earns you credits\n\nIt's clean, reliable, and proven technology that's been improving for decades!"
+    response: "Solar is brilliant technology! ☀️\n\n1. Solar panels capture sunlight\n2. Convert to DC electricity via photovoltaic cells\n3. Inverter converts DC to usable AC power\n4. Battery storage (optional) stores excess energy\n5. Power your home/business with clean energy\n6. Excess to grid (hybrid systems) earns you credits\n\nIt's clean, reliable, and proven technology that's been improving for decades!"
   },
 
   // Battery & Storage
   battery: {
     keywords: ['battery', 'storage', 'lithium', 'tubular', 'backup', 'store'],
-    response: "Battery storage gives you energy independence! 🔋\n\n**Lithium-ion** (Premium):\n✅ 10+ year lifespan\n✅ 80-95% efficiency\n✅ Lightweight & compact\n✅ Best performance\n\n**Tubular Lead-Acid** (Budget):\n✅ 5-7 year lifespan\n✅ 70-80% efficiency\n✅ Lower upfront cost\n✅ Proven technology\n\nStorage size depends on your power needs and desired backup time. Our calculator helps you find the perfect balance!"
+    response: "Battery storage gives you energy independence! 🔋\n\nLithium-ion (Premium)\n✅ 10+ year lifespan\n✅ 80-95% efficiency\n✅ Lightweight & compact\n✅ Best performance\n\nTubular Lead-Acid (Budget)\n✅ 5-7 year lifespan\n✅ 70-80% efficiency\n✅ Lower upfront cost\n✅ Proven technology\n\nStorage size depends on your power needs and desired backup time. Our calculator helps you find the perfect balance!"
   },
 
   // Commercial
   commercial: {
     keywords: ['business', 'commercial', 'office', 'company', 'industrial', 'factory'],
-    response: "Solar makes business sense! 💼\n\n**Benefits**:\n📉 Reduce operating costs\n🌱 Corporate sustainability goals\n💰 Tax incentives & depreciation\n⚡ Energy independence\n📊 Predictable energy costs\n\nWe handle systems from small offices to large industrial facilities. Our commercial packages include:\n• Custom system design\n• ROI analysis\n• Generator integration\n• Remote monitoring\n• Maintenance contracts\n\nLet's discuss your business needs!"
+    response: "Solar makes business sense! 💼\n\nBenefits:\n📉 Reduce operating costs\n🌱 Corporate sustainability goals\n💰 Tax incentives & depreciation\n⚡ Energy independence\n📊 Predictable energy costs\n\nWe handle systems from small offices to large industrial facilities.\n\nOur commercial packages include:\n• Custom system design\n• ROI analysis\n• Generator integration\n• Remote monitoring\n• Maintenance contracts\n\nLet's discuss your business needs!"
   },
 
   // Default fallback
