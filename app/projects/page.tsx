@@ -98,7 +98,7 @@ const ProjectsPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-24">
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-12">
         <div className="max-w-[1280px] mx-auto px-4 xl:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

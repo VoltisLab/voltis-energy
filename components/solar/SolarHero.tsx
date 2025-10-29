@@ -18,7 +18,7 @@ const SolarHero = () => {
       <div className="absolute top-20 right-20 w-96 h-96 bg-yellow-400/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-orange-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
-      <div className="max-w-[1280px] mx-auto px-4 xl:px-8 py-24 md:py-32 relative z-10">
+      <div className="max-w-[1280px] mx-auto px-4 xl:px-8 py-12 md:py-16 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
