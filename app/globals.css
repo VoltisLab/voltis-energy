@@ -10,8 +10,47 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 14px; /* Reduced from default 16px */
 }
 
 body {
   @apply antialiased;
+}
+
+/* Scale down headings */
+h1 {
+  font-size: 2.5rem !important; /* ~40px instead of 48px+ */
+}
+
+h2 {
+  font-size: 2rem !important; /* ~32px instead of 36px+ */
+}
+
+h3 {
+  font-size: 1.5rem !important; /* ~24px instead of 30px+ */
+}
+
+h4 {
+  font-size: 1.25rem !important; /* ~20px instead of 24px+ */
+}
+
+/* Reduce paragraph text */
+p {
+  font-size: 1rem !important; /* ~14px */
+  line-height: 1.6 !important;
+}
+
+/* Reduce button padding */
+button {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  font-size: 0.875rem !important;
+}
+
+/* Reduce spacing */
+section {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }

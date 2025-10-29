@@ -3,10 +3,12 @@ import { motion, useInView } from 'framer-motion';
 import { MapPin, Zap, TrendingDown, Calendar, Award } from 'lucide-react';
 import { useRef } from 'react';
 import Link from 'next/link';
+import { useLocation } from '@/contexts/LocationContext';
 
 const ProjectsPage = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const { currencySymbol } = useLocation();
 
   const projects = [
     {
@@ -16,7 +18,7 @@ const ProjectsPage = () => {
       systemSize: '6.5 kW',
       panels: '16 x 400W panels',
       date: 'March 2024',
-      savings: '£1,200/year',
+      savings: 1200,
       co2Offset: '3.2 tons/year',
       description: 'Complete home solar installation with battery storage, providing energy independence and significant cost savings.',
       features: ['SolarEdge inverter', 'Tesla Powerwall 2', 'Smart monitoring', 'Net metering'],
@@ -30,7 +32,7 @@ const ProjectsPage = () => {
       systemSize: '45 kW',
       panels: '100 x 450W panels',
       date: 'January 2024',
-      savings: '£8,500/year',
+      savings: 8500,
       co2Offset: '22 tons/year',
       description: 'Large-scale commercial installation powering a tech company\'s headquarters, demonstrating corporate sustainability commitment.',
       features: ['Enphase microinverters', 'Real-time monitoring', 'Employee dashboard', 'Tax incentives'],
@@ -44,7 +46,7 @@ const ProjectsPage = () => {
       systemSize: '8 kW',
       panels: '20 x 400W panels',
       date: 'December 2023',
-      savings: '£1,800/year',
+      savings: 1800,
       co2Offset: '4.5 tons/year',
       description: 'Premium solar system with battery backup, ensuring continuous power and maximizing self-consumption.',
       features: ['LG Solar panels', 'LG Chem battery', '24/7 backup power', 'Smart home integration'],
@@ -58,7 +60,7 @@ const ProjectsPage = () => {
       systemSize: '75 kW',
       panels: '167 x 450W panels',
       date: 'November 2023',
-      savings: '£14,000/year',
+      savings: 14000,
       co2Offset: '38 tons/year',
       description: 'Major retail installation reducing operational costs and showcasing environmental leadership to customers.',
       features: ['SolarEdge optimizers', 'Cloud monitoring', 'Roof membrane upgrade', 'Dual inverters'],
@@ -72,7 +74,7 @@ const ProjectsPage = () => {
       systemSize: '5 kW',
       panels: '12 x 415W panels',
       date: 'October 2023',
-      savings: '£950/year',
+      savings: 950,
       co2Offset: '2.8 tons/year',
       description: 'Efficient solar installation on a smaller home, proving solar works for properties of all sizes.',
       features: ['SunPower panels', 'Enphase IQ8', 'App monitoring', '25-year warranty'],
@@ -86,7 +88,7 @@ const ProjectsPage = () => {
       systemSize: '100 kW',
       panels: '222 x 450W panels',
       date: 'September 2023',
-      savings: '£18,500/year',
+      savings: 18500,
       co2Offset: '52 tons/year',
       description: 'Educational facility solar project, teaching students about renewable energy while reducing school operating costs.',
       features: ['Canadian Solar panels', 'SMA inverters', 'Student monitoring access', 'Educational dashboard'],
@@ -202,7 +204,7 @@ const ProjectsPage = () => {
                         <TrendingDown className="w-5 h-5 mr-2" />
                         <span className="text-sm font-semibold">Annual Savings</span>
                       </div>
-                      <div className="text-2xl font-bold text-green-900">{project.savings}</div>
+                      <div className="text-2xl font-bold text-green-900">{currencySymbol}{project.savings.toLocaleString()}/year</div>
                       <div className="text-xs text-gray-600 mt-1">{project.co2Offset} CO₂ offset</div>
                     </div>
                   </div>

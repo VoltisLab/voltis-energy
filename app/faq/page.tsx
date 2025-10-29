@@ -3,9 +3,11 @@ import { motion } from 'framer-motion';
 import { HelpCircle, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import Link from 'next/link';
+import { useLocation } from '@/contexts/LocationContext';
 
 const FAQPage = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { currencySymbol } = useLocation();
 
   const faqCategories = [
     {
@@ -55,7 +57,7 @@ const FAQPage = () => {
       questions: [
         {
           q: 'How much does a solar system cost?',
-          a: 'Residential systems typically range from £5,000-£12,000 depending on size and components. The average UK home needs a 3-6kW system. We offer free consultations to provide accurate quotes based on your specific needs and energy usage.'
+          a: `Residential systems typically range from ${currencySymbol}5,000-${currencySymbol}12,000 depending on size and components. The average home needs a 3-6kW system. We offer free consultations to provide accurate quotes based on your specific needs and energy usage.`
         },
         {
           q: 'What financing options are available?',
@@ -67,7 +69,7 @@ const FAQPage = () => {
         },
         {
           q: 'How quickly will I recoup my investment?',
-          a: 'Most homeowners see payback in 6-10 years through energy savings and incentives. After that, you enjoy free electricity for the remaining 15-20+ years of the system\'s life. Total 25-year savings often exceed £20,000.'
+          a: `Most homeowners see payback in 6-10 years through energy savings and incentives. After that, you enjoy free electricity for the remaining 15-20+ years of the system's life. Total 25-year savings often exceed ${currencySymbol}20,000.`
         }
       ]
     },

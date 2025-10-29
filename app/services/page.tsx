@@ -3,10 +3,12 @@ import { motion, useInView } from 'framer-motion';
 import { Home, Building2, Wrench, ShieldCheck, LineChart, Sun, Check, Phone } from 'lucide-react';
 import { useRef } from 'react';
 import Link from 'next/link';
+import { useLocation } from '@/contexts/LocationContext';
 
 const ServicesPage = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const { currencySymbol } = useLocation();
 
   const services = [
     {
@@ -28,7 +30,8 @@ const ServicesPage = () => {
         'Lock in energy costs for 25+ years',
         'Reduce carbon footprint by 4+ tons/year'
       ],
-      pricing: 'From £5,500',
+      pricing: 5500,
+      pricingPrefix: 'From',
       gradient: 'from-blue-500 to-blue-700',
       link: '/contact'
     },
@@ -193,7 +196,12 @@ const ServicesPage = () => {
                   <p className="text-lg text-white/90 mb-6">{service.subtitle}</p>
                   <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 inline-block">
                     <div className="text-sm text-white/80 mb-1">Starting at</div>
-                    <div className="text-2xl font-bold">{service.pricing}</div>
+                    <div className="text-2xl font-bold">
+                      {typeof service.pricing === 'number' 
+                        ? `${service.pricingPrefix ? service.pricingPrefix + ' ' : ''}${currencySymbol}${service.pricing.toLocaleString()}`
+                        : service.pricing
+                      }
+                    </div>
                   </div>
                 </div>
 
