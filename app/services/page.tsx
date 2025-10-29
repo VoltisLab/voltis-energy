@@ -8,7 +8,7 @@ import { useLocation } from '@/contexts/LocationContext';
 const ServicesPage = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const { currencySymbol } = useLocation();
+  const { formatPrice } = useLocation();
 
   const services = [
     {
@@ -198,7 +198,7 @@ const ServicesPage = () => {
                     <div className="text-sm text-white/80 mb-1">Starting at</div>
                     <div className="text-2xl font-bold">
                       {typeof service.pricing === 'number' 
-                        ? `${service.pricingPrefix ? service.pricingPrefix + ' ' : ''}${currencySymbol}${service.pricing.toLocaleString()}`
+                        ? `${service.pricingPrefix ? service.pricingPrefix + ' ' : ''}${formatPrice(service.pricing)}`
                         : service.pricing
                       }
                     </div>

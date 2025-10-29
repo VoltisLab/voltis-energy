@@ -8,7 +8,7 @@ import Link from 'next/link';
 const ProductsPage = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const { currencySymbol } = useLocation();
+  const { formatPrice } = useLocation();
 
   const solarPanels = [
     {
@@ -357,7 +357,7 @@ const ProductsPage = () => {
                   <div className="text-xs text-gray-500 mb-1">{panel.brand}</div>
                   <h3 className="text-lg font-bold text-gray-900">{panel.model}</h3>
                   <div className="flex items-baseline gap-2 mt-2">
-                    <span className="text-2xl font-bold text-blue-600">{currencySymbol}{panel.price}</span>
+                    <span className="text-2xl font-bold text-blue-600">{formatPrice(panel.price)}</span>
                     <span className="text-sm text-gray-500">per panel</span>
                   </div>
                 </div>
@@ -415,7 +415,7 @@ const ProductsPage = () => {
                   <div className="text-xs text-gray-500 mb-1">{inverter.brand}</div>
                   <h3 className="text-lg font-bold text-gray-900">{inverter.model}</h3>
                   <div className="flex items-baseline gap-2 mt-2">
-                    <span className="text-2xl font-bold text-blue-600">{currencySymbol}{inverter.price}</span>
+                    <span className="text-2xl font-bold text-blue-600">{formatPrice(inverter.price)}</span>
                   </div>
                 </div>
                 <div className="space-y-2 mb-4">
@@ -472,7 +472,7 @@ const ProductsPage = () => {
                   <div className="text-xs text-gray-500 mb-1">{battery.brand}</div>
                   <h3 className="text-lg font-bold text-gray-900">{battery.model}</h3>
                   <div className="flex items-baseline gap-2 mt-2">
-                    <span className="text-2xl font-bold text-blue-600">{currencySymbol}{battery.price}</span>
+                    <span className="text-2xl font-bold text-blue-600">{formatPrice(battery.price)}</span>
                   </div>
                 </div>
                 <div className="space-y-2 mb-4">
@@ -529,7 +529,7 @@ const ProductsPage = () => {
                   <div className="text-xs text-gray-500 mb-1">{item.category}</div>
                   <h3 className="text-base font-bold text-gray-900 line-clamp-2">{item.name}</h3>
                   <div className="flex items-baseline gap-2 mt-2">
-                    <span className="text-xl font-bold text-blue-600">{currencySymbol}{item.price}</span>
+                    <span className="text-xl font-bold text-blue-600">{formatPrice(item.price)}</span>
                   </div>
                 </div>
                 <div className="space-y-1 mb-3">

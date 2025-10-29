@@ -5,7 +5,7 @@ import { useLocation } from '@/contexts/LocationContext';
 import Link from 'next/link';
 
 export default function PackagesPage() {
-  const { currencySymbol } = useLocation();
+  const { formatPrice } = useLocation();
 
   const packages = [
     {
@@ -154,7 +154,7 @@ export default function PackagesPage() {
                   <div className="text-3xl font-bold">
                     {pkg.priceMin ? (
                       <>
-                        {currencySymbol}{(pkg.priceMin / 1000).toFixed(0)}k–{currencySymbol}{(pkg.priceMax! / 1000000).toFixed(1)}M
+                        {formatPrice(pkg.priceMin / 1950).split('.')[0]}–{formatPrice(pkg.priceMax! / 1950).split('.')[0]}
                       </>
                     ) : (
                       'Quote only'
@@ -242,7 +242,7 @@ export default function PackagesPage() {
                       <td className="px-6 py-4 font-bold text-blue-600">
                         {pkg.priceMin ? (
                           <>
-                            {currencySymbol}{(pkg.priceMin / 1000).toFixed(0)}k–{currencySymbol}{(pkg.priceMax! / 1000000).toFixed(1)}M
+                            {formatPrice(pkg.priceMin / 1950).split('.')[0]}–{formatPrice(pkg.priceMax! / 1950).split('.')[0]}
                           </>
                         ) : (
                           'Quote only'

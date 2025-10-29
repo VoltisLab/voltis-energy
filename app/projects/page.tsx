@@ -8,7 +8,7 @@ import { useLocation } from '@/contexts/LocationContext';
 const ProjectsPage = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const { currencySymbol } = useLocation();
+  const { formatPrice } = useLocation();
 
   const projects = [
     {
@@ -201,7 +201,7 @@ const ProjectsPage = () => {
                         <TrendingDown className="w-5 h-5 mr-2" />
                         <span className="text-sm font-semibold">Annual Savings</span>
                       </div>
-                      <div className="text-2xl font-bold text-green-900">{currencySymbol}{project.savings.toLocaleString()}/year</div>
+                      <div className="text-2xl font-bold text-green-900">{formatPrice(project.savings)}/year</div>
                       <div className="text-xs text-gray-600 mt-1">{project.co2Offset} CO₂ offset</div>
                     </div>
                   </div>
