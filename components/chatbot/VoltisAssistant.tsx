@@ -110,7 +110,7 @@ const knowledgeBase = {
 
   // Default fallback
   default: {
-    response: "I'm here to help with all things Voltis Energy! I can answer questions about:\n\n⚡ **Solar packages & pricing**\n🔧 **Products & services**\n📊 **System design & calculator**\n💰 **Savings & ROI**\n📍 **Locations & coverage**\n🛠️ **Installation process**\n🛡️ **Warranties & support**\n\nWhat would you like to know more about?"
+    response: "I'm here to help with all things Voltis Energy! I can answer questions about:\n\n⚡ Solar packages & pricing\n🔧 Products & services\n📊 System design & calculator\n💰 Savings & ROI\n📍 Locations & coverage\n🛠️ Installation process\n🛡️ Warranties & support\n\nWhat would you like to know more about?"
   }
 };
 
