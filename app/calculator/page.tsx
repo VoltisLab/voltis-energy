@@ -108,7 +108,7 @@ export default function CalculatorPage() {
 
       {/* Main Content */}
       <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 xl:px-8">
+        <div className="max-w-[1280px] mx-auto px-4 xl:px-8">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Configuration Form */}
             <div className="lg:col-span-2 space-y-6">
@@ -430,7 +430,7 @@ export default function CalculatorPage() {
 
       {/* Info Banner */}
       <section className="py-12 bg-blue-50">
-        <div className="max-w-7xl mx-auto px-4 xl:px-8">
+        <div className="max-w-[1280px] mx-auto px-4 xl:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Go Solar?
