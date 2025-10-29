@@ -178,11 +178,9 @@ export default function VoltisAssistant() {
       const hasMatch = keywords.some(keyword => lowerQuery.includes(keyword));
       
       if (hasMatch) {
-        const response = 'response' in category ? category.response : null;
-        const responses = 'responses' in category ? category.responses : null;
-        
         // Handle array of responses (multiple variations)
-        if (responses && Array.isArray(responses)) {
+        if ('responses' in category && category.responses) {
+          const responses = category.responses as any[];
           const randomResponse = responses[Math.floor(Math.random() * responses.length)];
           
           // Handle dynamic responses (like pricing functions)
@@ -190,11 +188,13 @@ export default function VoltisAssistant() {
             return randomResponse(currencySymbol);
           }
           
-          return randomResponse as string;
+          return randomResponse;
         }
         
         // Handle single response (backward compatibility)
-        if (response) {
+        if ('response' in category && category.response) {
+          const response = category.response as any;
+          
           // Handle dynamic responses (like pricing)
           if (typeof response === 'function') {
             return response(currencySymbol);
@@ -205,7 +205,7 @@ export default function VoltisAssistant() {
             return response[Math.floor(Math.random() * response.length)];
           }
           
-          return response as string;
+          return response;
         }
       }
     }
