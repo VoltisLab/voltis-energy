@@ -182,26 +182,38 @@ export default function VoltisAssistant() {
     setInputValue('');
     setIsThinking(true);
 
-    // Find best response
-    const responseContent = findBestResponse(inputValue);
-    
-    // Calculate delay based on response length (100-300ms per 100 characters)
-    const baseDelay = 1500; // Minimum 1.5 seconds
-    const lengthDelay = Math.floor(responseContent.length / 100) * 300;
-    const totalDelay = Math.min(baseDelay + lengthDelay, 4000); // Max 4 seconds
+    try {
+      // Find best response
+      const responseContent = findBestResponse(inputValue);
+      
+      // Calculate delay based on response length (100-300ms per 100 characters)
+      const baseDelay = 1500; // Minimum 1.5 seconds
+      const lengthDelay = Math.floor(responseContent.length / 100) * 300;
+      const totalDelay = Math.min(baseDelay + lengthDelay, 4000); // Max 4 seconds
 
-    // Simulate thinking
-    await new Promise(resolve => setTimeout(resolve, totalDelay));
+      // Simulate thinking
+      await new Promise(resolve => setTimeout(resolve, totalDelay));
 
-    const assistantMessage: Message = {
-      id: (Date.now() + 1).toString(),
-      type: 'assistant',
-      content: responseContent,
-      timestamp: new Date()
-    };
+      const assistantMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        type: 'assistant',
+        content: responseContent,
+        timestamp: new Date()
+      };
 
-    setIsThinking(false);
-    setMessages(prev => [...prev, assistantMessage]);
+      setIsThinking(false);
+      setMessages(prev => [...prev, assistantMessage]);
+    } catch (error) {
+      console.error('Chatbot error:', error);
+      setIsThinking(false);
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        type: 'assistant',
+        content: "I apologize, but I encountered an error. Please try asking your question again, or contact us directly at solar@voltisenergy.com for immediate assistance!",
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
